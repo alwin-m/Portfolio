@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alwin - Computer Engineering & Developer</title>
+    <title>Alwin Madhu - Computer Engineering & Developer</title>
+    <meta name="description" content="Alwin Madhu, a computer engineering student and developer from India, specializes in privacy-first web apps, Flutter, and short-form content creation. Explore my projects and connect with me.">
+    <meta name="keywords" content="Alwin Madhu, computer engineering, web developer, privacy-first apps, Flutter developer, content creator, India developer, programming portfolio">
+    <meta name="author" content="Alwin Madhu">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Alwin Madhu - Computer Engineering & Developer">
+    <meta property="og:description" content="Discover Alwin Madhu's portfolio, showcasing privacy-focused web apps, Flutter projects, and engaging short-form content. Connect for collaborations!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alwin-m.github.io">
+    <meta property="og:image" content="https://alwin-m.github.io/assets/profile-image.jpg">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alwin Madhu - Computer Engineering & Developer">
+    <meta name="twitter:description" content="Alwin Madhu's portfolio features privacy-first web apps, Flutter development, and creative content. Check out my work!">
+    <meta name="twitter:image" content="https://alwin-m.github.io/assets/profile-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alwin-m.github.io">
     <style>
         * {
             margin: 0;
@@ -163,14 +182,7 @@
         }
 
         /* Section Headers */
-        .section h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 0.75rem;
-        }
-
-        .section h4 {
+        .section h3, .section h4 {
             font-size: 1.25rem;
             font-weight: 600;
             color: #1f2937;
@@ -290,7 +302,6 @@
             animation: fadeInUp 0.6s ease-out;
         }
 
-        /* Stagger the animation for sections */
         .section:nth-child(1) { animation-delay: 0.1s; }
         .section:nth-child(2) { animation-delay: 0.2s; }
         .section:nth-child(3) { animation-delay: 0.3s; }
@@ -302,10 +313,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>Alwin</h1>
-                    <p>Computer Engineering · Developer · Creator</p>
+                    <h1>Alwin Madhu</h1>
+                    <p>Computer Engineering · Web Developer · Content Creator</p>
                 </div>
-                <nav>
+                <nav aria-label="Main navigation">
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
@@ -317,52 +328,56 @@
     <main>
         <div class="container">
             <!-- Hero Section -->
-            <section class="section">
+            <section class="section" itemscope itemtype="https://schema.org/Person">
                 <div class="hero">
                     <div class="hero-text">
-                        <h2>Hi — I'm Alwin.</h2>
-                        <p>A curious, driven computer engineering student building privacy-first web apps, delightful short-form content, and practical product ideas. I combine engineering rigor with creative instincts — debugging bugs by day, crafting viral short videos by night.</p>
+                        <h2>Hi — I'm Alwin Madhu.</h2>
+                        <p itemprop="description">I'm Alwin Madhu, a computer engineering student from India, passionate about building privacy-first web applications, Flutter development, and creating engaging short-form content. I blend technical expertise with creative storytelling to craft impactful digital experiences.</p>
 
                         <div class="hero-stats">
                             <div class="stat-item">
                                 <dt>Location</dt>
-                                <dd>India</dd>
+                                <dd itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                    <span itemprop="addressCountry">India</span>
+                                </dd>
                             </div>
                             <div class="stat-item">
                                 <dt>Focus</dt>
-                                <dd>Web apps · Privacy · Content creation</dd>
+                                <dd>Web Apps · Privacy · Content Creation</dd>
                             </div>
                         </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="/assets/profile-image.jpg" alt="Alwin Madhu, computer engineering student and developer" class="profile-placeholder" width="160" height="160">
                     </div>
                 </div>
             </section>
 
             <!-- About Section -->
             <section id="about" class="section">
-                <h3>About me</h3>
-                <p>I'm studying Computer Engineering and enjoy building client-side web applications that place privacy and simplicity first. I like to explore product problems (especially social & dating tech), reverse-engineer systems to find weaknesses, and prototype better experiences. Alongside engineering I create short, meaningful social media videos focused on relatability and emotional impact.</p>
+                <h3>About Alwin Madhu</h3>
+                <p>I'm a computer engineering student based in India, dedicated to developing privacy-focused web applications and exploring innovative solutions in social and dating tech. My work emphasizes simplicity, user experience, and emotional impact, whether I'm coding with C, Django, or Flutter, or creating relatable short-form videos for social media.</p>
 
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h5>Core strengths</h5>
+                        <h5>Core Strengths</h5>
                         <ul class="skill-list">
-                            <li>Proficient in C programming, Django, HTML/CSS/JS</li>
-                            <li>Learning Flutter for cross-platform apps</li>
-                            <li>Licensed from AWS</li>
-                            <li>Product thinking & privacy-aware design</li>
-                            <li>Content creation: short-form video and memes</li>
-                            <li>Debugging, system analysis, licensing basics</li>
+                            <li>Proficient in C programming, Django, HTML, CSS, JavaScript</li>
+                            <li>Learning Flutter for cross-platform app development</li>
+                            <li>AWS-certified developer</li>
+                            <li>Privacy-first design and product thinking</li>
+                            <li>Short-form video content creation and memes</li>
+                            <li>System analysis, debugging, and licensing knowledge</li>
                         </ul>
                     </div>
-
                     <div class="skill-category">
-                        <h5>Current focus</h5>
+                        <h5>Current Focus</h5>
                         <ul class="skill-list">
-                            <li>Privacy-first web prototypes (period tracking demo)</li>
-                            <li>Studying Flutter for upcoming projects</li>
-                            <li>Building social confidence and communication tools</li>
-                            <li>Polished, shareable short videos for social platforms</li>
-                            <li>Creating solutions with real societal impact</li>
+                            <li>Privacy-first web prototypes, including period tracking apps</li>
+                            <li>Advancing skills in Flutter for mobile apps</li>
+                            <li>Building tools for social confidence and communication</li>
+                            <li>Creating polished, shareable social media videos</li>
+                            <li>Developing solutions with societal impact</li>
                         </ul>
                     </div>
                 </div>
@@ -370,21 +385,19 @@
 
             <!-- Projects Section -->
             <section id="projects" class="section">
-                <h4>Projects</h4>
-                <p>You can explore all my coding projects, prototypes, and experiments directly on my GitHub profile.</p>
-
+                <h4>Projects by Alwin Madhu</h4>
+                <p>Explore my portfolio of coding projects, privacy-focused prototypes, and creative experiments on GitHub, including my work on ROS Cycle and other innovative web applications.</p>
                 <div>
                     <a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer" class="btn">
-                        Visit my GitHub
+                        Visit My GitHub
                     </a>
                 </div>
             </section>
 
             <!-- Contact Section -->
             <section id="contact" class="section">
-                <h4>Contact</h4>
-                <p>Let's connect for collaborations, internships, and projects. The fastest way to reach me is through my LinkedIn profile.</p>
-
+                <h4>Contact Alwin Madhu</h4>
+                <p>Interested in collaborating on web development, Flutter projects, or content creation? Connect with me on LinkedIn for opportunities, internships, or project discussions.</p>
                 <div>
                     <a href="https://www.linkedin.com/in/alwinmadhu7/" target="_blank" rel="noopener noreferrer" class="btn">
                         Connect on LinkedIn
@@ -396,7 +409,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Alwin — Built with clarity, curiosity, and a little mischief.</p>
+            <p>© 2025 Alwin Madhu — Built with clarity, curiosity, and a passion for innovation.</p>
         </div>
     </footer>
 
@@ -415,5 +428,3 @@
             });
         });
     </script>
-</body>
-</html>
