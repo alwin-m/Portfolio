@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alwin - Computer Engineering & Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f9fafb;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            padding: 1.5rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            letter-spacing: -0.025em;
+        }
+
+        .logo p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            font-size: 0.875rem;
+            color: #1f2937;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #f3f4f6;
+        }
+
+        /* Main Content */
+        main {
+            padding-bottom: 3rem;
+        }
+
+        /* Sections */
+        .section {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .hero-text h2 {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+
+        .hero-text p {
+            color: #374151;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-item dt {
+            font-weight: 500;
+            color: #1f2937;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item dd {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-placeholder {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 1rem;
+            background: linear-gradient(to bottom right, #e0e7ff, #fce7f3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .profile-placeholder span {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Section Headers */
+        .section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .section h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .section p {
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category h5 {
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-list {
+            list-style-type: disc;
+            list-style-position: inside;
+            color: #6b7280;
+        }
+
+        .skill-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #4338ca;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Alwin</h1>
+                    <p>Computer Engineering · Developer · Creator</p>
+                </div>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="section">
+                <div class="hero">
+                    <div class="hero-text">
+                        <h2>Hi — I'm Alwin.</h2>
+                        <p>A curious, driven computer engineering student building privacy-first web apps, delightful short-form content, and practical product ideas. I combine engineering rigor with creative instincts — debugging bugs by day, crafting viral short videos by night.</p>
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <dt>Location</dt>
+                                <dd>India</dd>
+                            </div>
+                            <div class="stat-item">
+                                <dt>Focus</dt>
+                                <dd>Web apps · Privacy · Content creation</dd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <!-- Option 1: Use actual profile image (uncomment and add your image file) -->
+                        <!-- <img src="profile.jpg" alt="Alwin's profile picture" class="profile-image"> -->
+                        
+                        <!-- Option 2: Keep placeholder until you add your image -->
+                        <div class="profile-placeholder">
+                            <span>Profile image</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <h3>About me</h3>
+                <p>I'm studying Computer Engineering and enjoy building client-side web applications that place privacy and simplicity first. I like to explore product problems (especially social & dating tech), reverse-engineer systems to find weaknesses, and prototype better experiences. Alongside engineering I create short, meaningful social media videos focused on relatability and emotional impact.</p>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h5>Core strengths</h5>
+                        <ul class="skill-list">
+                            <li>Proficient in C programming, Django, HTML/CSS/JS</li>
+                            <li>Learning Flutter for cross-platform apps</li>
+                            <li>Licensed from AWS</li>
+                            <li>Product thinking & privacy-aware design</li>
+                            <li>Content creation: short-form video and memes</li>
+                            <li>Debugging, system analysis, licensing basics</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5>Current focus</h5>
+                        <ul class="skill-list">
+                            <li>Privacy-first web prototypes (period tracking demo)</li>
+                            <li>Studying Flutter for upcoming projects</li>
+                            <li>Building social confidence and communication tools</li>
+                            <li>Polished, shareable short videos for social platforms</li>
+                            <li>Creating solutions with real societal impact</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <h4>Projects</h4>
+                <p>You can explore all my coding projects, prototypes, and experiments directly on my GitHub profile.</p>
+
+                <div>
+                    <a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer" class="btn">
+                        Visit my GitHub
+                    </a>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h4>Contact</h4>
+                <p>Let's connect for collaborations, internships, and projects. The fastest way to reach me is through my LinkedIn profile.</p>
+
+                <div>
+                    <a href="https://www.linkedin.com/in/alwinmadhu7/" target="_blank" rel="noopener noreferrer" class="btn">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Alwin — Built with clarity, curiosity, and a little mischief.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
