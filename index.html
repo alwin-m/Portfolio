@@ -108,16 +108,37 @@
             gap: 1rem;
         }
 
+        .stat-item {
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .stat-item:hover {
+            background-color: #f8fafc;
+            transform: scale(1.02);
+        }
+
         .stat-item dt {
             font-weight: 500;
             color: #1f2937;
             font-size: 0.875rem;
             margin-bottom: 0.25rem;
+            transition: color 0.3s ease;
         }
 
         .stat-item dd {
             color: #6b7280;
             font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .stat-item:hover dt {
+            color: #4f46e5;
+        }
+
+        .stat-item:hover dd {
+            color: #374151;
         }
 
         .hero-image {
@@ -252,6 +273,28 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Subtle fade-in animation for sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Stagger the animation for sections */
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
@@ -293,11 +336,9 @@
                     </div>
 
                     <div class="hero-image">
-                        <!-- Option 1: Use actual profile image (uncomment and add your image file) -->
-                        <!-- <img src="profile.jpg" alt="Alwin's profile picture" class="profile-image"> -->
-                        
-                        <!-- Option 2: Keep placeholder until you add your image -->
-                        <div class="profile-placeholder">
+                        <img src="profile.jpg" alt="Alwin's profile picture" class="profile-image" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="profile-placeholder" style="display: none;">
                             <span>Profile image</span>
                         </div>
                     </div>
