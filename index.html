@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alwin Madhu - Computer Engineer & Developer</title>
-    <meta name="description" content="Alwin Madhu is a computer engineering student and developer from India, passionate about open-source projects, web apps, AI, and research-driven solutions. Explore my work and connect for collaborations.">
-    <meta name="keywords" content="Alwin Madhu, computer engineering, web development, open source, AI, Flutter developer, India developer, programming portfolio">
+    <meta name="description" content="Alwin Madhu, a computer engineering student from India, builds open-source projects like ROS Cycle menstrual tracker and Scream 🐙. Explore web apps, AI solutions, and connect for collaborations.">
+    <meta name="keywords" content="Alwin Madhu, computer engineering, web development, open source, AI, Flutter developer, India developer, programming portfolio, PHP, MySQL, AWS, menstrual cycle tracker, ROS Cycle, period tracking app">
     <meta name="author" content="Alwin Madhu">
     <meta name="robots" content="index, follow">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Alwin Madhu - Computer Engineer & Developer">
-    <meta property="og:description" content="Discover Alwin Madhu's portfolio of open-source projects, including Scream 🐙, and innovative solutions in web apps and AI. Connect for collaboration opportunities.">
+    <meta property="og:description" content="Discover Alwin Madhu's portfolio of open-source projects, including ROS Cycle period tracker and Scream 🐙. Innovative solutions in web apps, AI, and menstrual health awareness. Connect for collaboration opportunities.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alwin-m.github.io">
+    <meta property="og:image" content="https://alwin-m.github.io/assets/og-image.jpg">
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Alwin Madhu - Computer Engineer & Developer">
-    <meta name="twitter:description" content="Alwin Madhu's portfolio showcases open-source development, AI, and research-driven solutions. Explore my work and connect!">
+    <meta name="twitter:description" content="Alwin Madhu's portfolio showcases open-source development like ROS Cycle, AI, and research-driven solutions. Explore my work and connect!">
+    <meta name="twitter:image" content="https://alwin-m.github.io/assets/twitter-image.jpg">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!-- Canonical URL -->
@@ -178,6 +180,35 @@
             font-size: 0.875rem;
         }
 
+        /* Latest Update Section */
+        .update-section {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+
+        .update-section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .update-section p {
+            color: #374151;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .update-section .date {
+            color: #6b7280;
+            font-size: 0.75rem;
+            font-style: italic;
+        }
+
         /* Section Headers */
         .section h3 {
             font-size: 1.25rem;
@@ -235,6 +266,7 @@
         .skill-list li:nth-child(4) { animation-delay: 0.5s; }
         .skill-list li:nth-child(5) { animation-delay: 0.6s; }
         .skill-list li:nth-child(6) { animation-delay: 0.7s; }
+        .skill-list li:nth-child(7) { animation-delay: 0.8s; }
 
         .skill-list li::before {
             content: '→';
@@ -258,6 +290,7 @@
 
         .project-list li:nth-child(1) { animation-delay: 0.2s; }
         .project-list li:nth-child(2) { animation-delay: 0.3s; }
+        .project-list li:nth-child(3) { animation-delay: 0.4s; }
 
         .project-list li:hover {
             transform: translateY(-2px);
@@ -278,7 +311,7 @@
         /* Buttons */
         .btn {
             display: inline-block;
-            padding: 0.5rem 1.25rem;
+            padding: 0.5rem Créer 1.25rem;
             background-color: #4f46e5;
             color: #ffffff;
             text-decoration: none;
@@ -484,6 +517,7 @@
                 </div>
                 <nav aria-label="Main navigation">
                     <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -496,7 +530,7 @@
             <section class="section" itemscope itemtype="https://schema.org/Person">
                 <div class="hero">
                     <div class="hero-text">
-                        <h2>Alwin Madhu</h2>
+                        <h2 itemprop="name">Alwin Madhu</h2>
                         <p itemprop="description">Computer Engineer & Developer based in India, passionate about open-source development, web apps, AI, and research-driven solutions. I love collaborating on innovative projects and exploring new technologies.</p>
                         <div class="hero-stats">
                             <div class="stat-item">
@@ -514,6 +548,13 @@
                 </div>
             </section>
 
+            <!-- Latest Update Section -->
+            <section class="update-section">
+                <h3>Latest Update</h3>
+                <p>Excited to share progress on <a href="https://github.com/alwin-m/ROS-Cycle-Project" target="_blank" rel="noopener noreferrer">ROS Cycle</a>, my open-source menstrual cycle tracker! Added PCOD symptom checking and enhanced calendar predictions for better fertility awareness. Try the live demo <a href="https://alwin-m.github.io/ROS-Cycle-Project/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                <p class="date">Updated: September 22, 2025</p>
+            </section>
+
             <!-- About Section -->
             <section id="about" class="section">
                 <h3>About Me</h3>
@@ -528,6 +569,7 @@
                             <li>Open Source Contributor (MIT License)</li>
                             <li>System Analysis & Hardware Skills</li>
                             <li>Comfortable with Linux environments</li>
+                            <li>Building privacy-focused health apps</li>
                         </ul>
                     </div>
                     <div class="skill-category">
@@ -538,21 +580,23 @@
                             <li>Researching AI and cloud computing</li>
                             <li>Leading innovative project teams</li>
                             <li>Solving real-world problems with code</li>
+                            <li>Menstrual health awareness tools</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <!-- Projects Section -->
-            <section id="projects" class="section">
+            <section id="projects" class="section" itemscope itemtype="https://schema.org/CreativeWork">
                 <h3>Projects</h3>
-                <p>Explore my projects, including Scream 🐙, a PHP and MySQL-powered anonymous social platform focused on free speech and distraction-free conversations. Visit my GitHub for more code and contributions.</p>
+                <p>Explore my projects, including <a href="https://alwin-m.github.io/ROS-Cycle-Project/" target="_blank" rel="noopener noreferrer">ROS Cycle</a>, an open-source menstrual cycle tracker, and Scream 🐙, a PHP and MySQL-powered anonymous social platform focused on free speech and distraction-free conversations. Visit my <a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer">GitHub</a> for more code and contributions.</p>
                 <ul class="project-list">
-                    <li><a href="https://github.com/alwin-m/scream" target="_blank" rel="noopener noreferrer">Scream 🐙</a>: An anonymous social platform built with PHP and MySQL, emphasizing free speech and clear conversations.</li>
-                    <li><a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer">More Projects</a>: Check out my GitHub for other open-source contributions.</li>
+                    <li itemprop="name"><a href="https://github.com/alwin-m/ROS-Cycle-Project" target="_blank" rel="noopener noreferrer" itemprop="url">ROS Cycle</a>: <span itemprop="description">A privacy-friendly, open-source web app for tracking menstrual cycles, predicting periods and fertile windows, with PCOD symptom checks. Built for education and awareness.</span></li>
+                    <li itemprop="name"><a href="https://github.com/alwin-m/scream" target="_blank" rel="noopener noreferrer" itemprop="url">Scream 🐙</a>: <span itemprop="description">An anonymous social platform built with PHP and MySQL, emphasizing free speech and clear conversations.</span></li>
+                    <li itemprop="name"><a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer" itemprop="url">More Projects</a>: <span itemprop="description">Check out my GitHub for other open-source contributions.</span></li>
                 </ul>
                 <div>
-                    <a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer" class="btn">
+                    <a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Visit Alwin Madhu's GitHub profile">
                         Visit My GitHub
                     </a>
                 </div>
@@ -561,9 +605,9 @@
             <!-- Contact Section -->
             <section id="contact" class="section">
                 <h3>Contact</h3>
-                <p>Love building cool stuff or swapping ideas? Let’s collaborate on open-source projects, startups, or innovative solutions. Connect with me on LinkedIn to create something amazing together!</p>
+                <p>Love building cool stuff or swapping ideas? Let’s collaborate on open-source projects, startups, or innovative solutions like menstrual health tools. Connect with me on <a href="https://www.linkedin.com/in/alwinmadhu7/" target="_blank" rel="noopener noreferrer">LinkedIn</a> to create something amazing together!</p>
                 <div>
-                    <a href="https://www.linkedin.com/in/alwinmadhu7/" target="_blank" rel="noopener noreferrer" class="btn">
+                    <a href="https://www.linkedin.com/in/alwinmadhu7/" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Connect with Alwin Madhu on LinkedIn">
                         Connect on LinkedIn
                     </a>
                 </div>
@@ -573,13 +617,13 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Alwin Madhu — Building the Future Through Code.</p>
+            <p>© 2025 Alwin Madhu — <a href="#projects">Explore Projects</a> | <a href="#contact">Get in Touch</a></p>
         </div>
     </footer>
 
     <script>
         // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('nav a[href^="#"], footer a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
