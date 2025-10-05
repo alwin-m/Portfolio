@@ -4,62 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alwin Madhu – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif;}
     body {background-color: #fff; color: #111; line-height: 1.8; overflow-x: hidden; scroll-behavior: smooth;}
-    a {text-decoration: none; color: #111; transition: opacity 0.3s;}
-    a:hover {opacity: 0.6;}
+    a {text-decoration: none; color: #111; transition: opacity 0.2s;}
+    a:hover {opacity: 0.7;}
 
     header {
       display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 80px; position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(30px);
-      border-bottom: 1px solid #eee;
+      padding: 15px 60px; position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); /* Reduced blur for performance */
+      border-bottom: 1px solid #f0f0f0;
     }
-    header h2 {letter-spacing: 1px; cursor: pointer; font-weight: 600;}
-    nav a {margin-left: 30px; font-weight: 500; position: relative;}
+    header h2 {letter-spacing: 0.5px; cursor: pointer; font-weight: 500; font-size: 1.4rem;}
+    nav a {margin-left: 25px; font-weight: 400; font-size: 1rem; position: relative;}
     nav a::after {
-      content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px;
-      background: #000; transition: width 0.3s;
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+      background: #111; transition: width 0.2s;
     }
     nav a:hover::after {width: 100%;}
 
     .hero {
       display: flex; flex-direction: column; justify-content: center; align-items: center;
       height: 100vh; text-align: center; background: #fff;
-      padding: 0 20px; animation: fadeIn 1.5s ease-in;
+      padding: 0 20px; animation: fadeIn 1.2s ease-in; /* Slightly faster fade */
     }
-    .hero h1 {font-size: 3.8rem; margin-bottom: 20px; font-weight: 500; color: #000; letter-spacing: -1px;}
-    .hero p {font-size: 1.15rem; max-width: 680px; color: #444;}
-    .btn {margin-top: 35px; padding: 14px 38px; border: 1px solid #000; color: #000; border-radius: 50px; transition: 0.3s; font-weight: 500;}
-    .btn:hover {background: #000; color: #fff;}
+    .hero h1 {font-size: 3.5rem; margin-bottom: 15px; font-weight: 400; color: #000; letter-spacing: -0.5px;}
+    .hero p {font-size: 1.1rem; max-width: 650px; color: #333; font-weight: 300;}
+    .btn {margin-top: 30px; padding: 12px 35px; border: 1px solid #111; color: #111; border-radius: 50px; transition: 0.2s; font-weight: 400; font-size: 1rem;}
+    .btn:hover {background: #111; color: #fff;}
 
-    section {padding: 120px 60px; max-width: 1100px; margin: auto; opacity: 0; transform: translateY(40px); transition: all 0.8s ease; background: #fff;}
+    section {padding: 100px 50px; max-width: 1100px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.6s ease; background: #fff;}
     section.visible {opacity: 1; transform: translateY(0);}
 
-    .about p {margin-bottom: 20px; color: #444; font-size: 1.1rem;}
+    .about p {margin-bottom: 15px; color: #333; font-size: 1rem; font-weight: 300;}
 
-    .projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 60px; margin-top: 60px;}
+    .projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; margin-top: 50px;}
     .project {
-      background: #fafafa; border-radius: 18px; padding: 45px;
-      transition: transform 0.4s, box-shadow 0.4s;
+      background: #fafafa; border-radius: 16px; padding: 40px;
+      transition: transform 0.3s, box-shadow 0.3s;
       border: 1px solid #f0f0f0;
     }
     .project:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
     }
-    .project h3 {color: #000; margin-bottom: 12px; font-weight: 500;}
-    .project p {color: #555; font-size: 1rem;}
-    .project-links {margin-top: 18px;}
-    .project-links a {margin-right: 20px; font-weight: 500;}
+    .project h3 {color: #000; margin-bottom: 10px; font-weight: 400; font-size: 1.2rem;}
+    .project p {color: #444; font-size: 0.95rem; font-weight: 300;}
+    .project-links {margin-top: 15px;}
+    .project-links a {margin-right: 15px; font-weight: 400; font-size: 0.95rem;}
 
     #contact {text-align: center;}
-    footer {text-align: center; padding: 60px; color: #888; border-top: 1px solid #eee; background: #fff;}
+    footer {text-align: center; padding: 50px; color: #777; border-top: 1px solid #f0f0f0; background: #fff; font-weight: 300; font-size: 0.9rem;}
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}
+      from {opacity: 0; transform: translateY(15px);} to {opacity: 1; transform: translateY(0);}
     }
 
     /* Loader Styles */
@@ -75,36 +75,42 @@
       justify-content: center;
       align-items: center;
       z-index: 1000;
-      transition: opacity 0.2s ease; /* Ultra-fast fade */
+      transition: opacity 0.15s ease; /* Ultra-fast fade */
+      will-change: opacity; /* Optimize for transitions */
     }
     .loader .spinner {
-      width: 20px; /* Smaller for minimalism */
-      height: 20px;
-      border: 1.5px solid #111; /* Thinner, cleaner */
-      border-top: 1.5px solid transparent;
+      width: 18px; /* Tighter, more minimal */
+      height: 18px;
+      border: 1px solid #111; /* Thinner border */
+      border-top: 1px solid transparent;
       border-radius: 50%;
-      animation: spin 0.6s linear infinite; /* Faster rotation */
-      margin-bottom: 8px; /* Tight spacing */
+      animation: spin 0.5s linear infinite; /* Faster rotation */
+      margin-bottom: 6px; /* Minimal spacing */
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
     .loader h1 {
-      font-size: 1.8rem; /* Smaller, cleaner */
+      font-size: 1.6rem; /* Smaller, cleaner */
       color: #111;
-      font-weight: 300; /* Ultra-light for Nothing-like aesthetic */
-      letter-spacing: 0.5px; /* Minimal spacing */
-      opacity: 0.7; /* Subtle transparency */
+      font-weight: 200; /* Ultra-light for Nothing aesthetic */
+      letter-spacing: 0.3px; /* Minimal spacing */
+      opacity: 0;
+      animation: fadeText 0.4s ease-in forwards; /* Quick text fade-in */
+    }
+    @keyframes fadeText {
+      from { opacity: 0; }
+      to { opacity: 0.6; } /* Subtle transparency */
     }
 
     @media (max-width: 768px) {
-      header {flex-direction: column; padding: 15px 20px;}
-      nav a {margin: 10px;}
-      .hero h1 {font-size: 2.5rem;}
-      section {padding: 100px 20px;}
-      .loader h1 { font-size: 1.3rem; }
-      .loader .spinner { width: 16px; height: 16px; }
+      header {flex-direction: column; padding: 12px 20px;}
+      nav a {margin: 8px; font-size: 0.9rem;}
+      .hero h1 {font-size: 2.2rem;}
+      section {padding: 80px 20px;}
+      .loader h1 { font-size: 1.2rem; }
+      .loader .spinner { width: 14px; height: 14px; }
     }
   </style>
 </head>
@@ -116,7 +122,7 @@
   </div>
 
   <!-- Main Content -->
-  <div id="main-content" style="display: none; transition: opacity 0.2s ease;">
+  <div id="main-content" style="display: none; transition: opacity 0.15s ease; will-change: opacity;">
     <header>
       <h2>Alwin Madhu</h2>
       <nav>
@@ -182,7 +188,7 @@
         loader.style.display = 'none';
         mainContent.style.display = 'block';
         mainContent.style.opacity = '1';
-      }, 1000); // Loader visible for 1 second
+      }, 800); // Loader visible for 0.8 seconds
     });
 
     // Smooth scrolling for navigation
@@ -193,22 +199,26 @@
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - 80, // Adjust for fixed header
+            top: targetElement.offsetTop - 70, // Adjusted for header
             behavior: 'smooth'
           });
         }
       });
     });
 
-    // Section reveal
+    // Section reveal with debounce
     const sections = document.querySelectorAll('section');
+    let isScrolling;
     const revealOnScroll = () => {
-      sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 120) {
-          sec.classList.add('visible');
-        }
-      });
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            sec.classList.add('visible');
+          }
+        });
+      }, 50); // Debounce for smoother performance
     };
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
