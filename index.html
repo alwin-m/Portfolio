@@ -176,7 +176,7 @@
       <nav>
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#research" class="nav-link">Research</a>
+        <a href="research.html" class="nav-link">Research</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </header>
@@ -232,6 +232,9 @@
           </div>
         </div>
       </div>
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="research.html" class="btn nav-link">See More Research</a>
+      </div>
     </section>
 
     <section id="contact">
@@ -265,7 +268,7 @@
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const href = link.getAttribute('href');
-        if (href === 'projects.html') {
+        if (href === 'projects.html' || href === 'research.html') {
           window.location.href = href;
         } else {
           const targetId = href.substring(1);
