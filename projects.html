@@ -1,59 +1,64 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alwin Madhu – Projects</title>
-  <!-- Security: Content Security Policy (CSP) to prevent XSS and data injection attacks -->
+  <!-- Security: Content Security Policy (CSP) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com; connect-src 'self';">
-  <!-- Security: Prevent clickjacking by denying framing -->
+  <!-- Security: Prevent clickjacking -->
   <meta http-equiv="X-Frame-Options" content="DENY">
   <!-- Security: Prevent MIME type sniffing -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <!-- Security: Strict referrer policy to limit referrer information -->
+  <!-- Security: Strict referrer policy -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- Preload Google Fonts for performance, with integrity for SRI (Subresource Integrity) to prevent tampering -->
+  <!-- SEO Metadata -->
+  <meta name="description" content="Projects by Alwin Madhu — showcasing innovative solutions in AI, web development, and creative technology. Explore SCREAM, ROSCYCLE, BlueMind, and more.">
+  <meta name="keywords" content="Alwin Madhu, projects, AI developer, creative technologist, web development, SCREAM, ROSCYCLE, BlueMind, open source, India">
+  <meta name="author" content="Alwin Madhu">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Alwin Madhu — Projects">
+  <meta property="og:description" content="Explore the innovative projects of Alwin Madhu, an AI-focused creative technologist, including SCREAM, ROSCYCLE, and BlueMind.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/alwin-m/Portfolio/main/preview-image.jpg">
+  <meta property="og:url" content="https://alwin-m.github.io/Portfolio/projects.html">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alwin Madhu — Projects">
+  <meta name="twitter:description" content="Discover Alwin Madhu's projects in AI, web development, and creative technology.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/alwin-m/Portfolio/main/preview-image.jpg">
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://alwin-m.github.io/Portfolio/projects.html">
+  <!-- JSON-LD Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Alwin Madhu — Projects",
+    "url": "https://alwin-m.github.io/Portfolio/projects.html",
+    "description": "A collection of projects by Alwin Madhu, showcasing innovative solutions in AI, web development, and creative technology.",
+    "creator": {
+      "@type": "Person",
+      "name": "Alwin Madhu",
+      "url": "https://alwin-m.github.io/Portfolio/",
+      "image": "https://raw.githubusercontent.com/alwin-m/Portfolio/main/profile.jpg",
+      "sameAs": [
+        "https://github.com/alwin-m",
+        "https://www.linkedin.com/in/alwinmadhu7/"
+      ],
+      "jobTitle": "Creative Technologist & AI Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independent"
+      },
+      "description": "Developer and creative thinker exploring the intersection of AI, technology, and design.",
+      "knowsAbout": ["Artificial Intelligence", "Web Development", "Human-Computer Interaction", "Creative Technology"]
+    }
+  }
+  </script>
+  <!-- Preload Google Fonts -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" integrity="sha384-8F1c8n/9O9U6J5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5z" crossorigin="anonymous">
+  <title>Alwin Madhu – Projects</title>
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif;}
     body {background-color: #fff; color: #111; line-height: 1.8; overflow-x: hidden; scroll-behavior: smooth;}
@@ -78,6 +83,7 @@
       padding: 0 20px; animation: fadeIn 1.2s ease-in;
     }
     .hero h1 {font-size: 3.5rem; margin-bottom: 15px; font-weight: 400; color: #000; letter-spacing: -0.5px;}
+    .hero .tagline {font-size: 1.2rem; color: #333; font-weight: 300; margin-bottom: 15px;}
     .hero p {font-size: 1.1rem; max-width: 650px; color: #333; font-weight: 300;}
     .btn {margin-top: 30px; padding: 12px 35px; border: 1px solid #111; color: #111; border-radius: 50px; transition: 0.2s; font-weight: 400; font-size: 1rem;}
     .btn:hover {background: #111; color: #fff;}
@@ -115,59 +121,104 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background: #fff;
+      background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 1000;
-      transition: opacity 0.15s ease;
+      transition: opacity 0.3s ease;
       will-change: opacity;
     }
-    .loader .spinner {
-      width: 18px;
-      height: 18px;
-      border: 1px solid #111;
-      border-top: 1px solid transparent;
+    .ai-indicator {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: slideInUp 0.6s ease-out 0.2s forwards;
+    }
+    .ai-dots {
+      display: flex;
+      gap: 4px;
+    }
+    .ai-dot {
+      width: 8px;
+      height: 8px;
+      background: #111;
       border-radius: 50%;
-      animation: spin 0.5s linear infinite;
-      margin-bottom: 6px;
+      animation: aiBounce 1.5s ease-in-out infinite;
     }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+    .ai-dot:nth-child(1) { animation-delay: 0s; }
+    .ai-dot:nth-child(2) { animation-delay: 0.2s; }
+    .ai-dot:nth-child(3) { animation-delay: 0.4s; }
     .loader h1 {
       font-size: 1.6rem;
       color: #111;
       font-weight: 200;
       letter-spacing: 0.3px;
       opacity: 0;
-      animation: fadeText 0.4s ease-in forwards;
+      animation: fadeText 0.6s ease-out 0.8s forwards;
+    }
+    .thinking-text {
+      font-size: 0.9rem;
+      color: #666;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+      opacity: 0;
+      animation: fadeText 0.6s ease-out 1.2s forwards;
+    }
+    .thinking-ellipsis::after {
+      content: '';
+      display: inline-block;
+      animation: ellipsis 1.5s ease-in-out infinite;
+    }
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes aiBounce {
+      0%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-4px); }
     }
     @keyframes fadeText {
-      from { opacity: 0; }
-      to { opacity: 0.6; }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes ellipsis {
+      0% { content: ''; }
+      33% { content: '.'; }
+      66% { content: '..'; }
+      100% { content: '...'; }
     }
     @media (max-width: 768px) {
       header {flex-direction: column; padding: 12px 20px;}
       nav a {margin: 8px; font-size: 0.9rem;}
       .hero h1 {font-size: 2.2rem;}
+      .hero .tagline {font-size: 1rem;}
       section {padding: 80px 20px;}
       .loader h1 { font-size: 1.2rem; }
-      .loader .spinner { width: 14px; height: 14px; }
+      .thinking-text { font-size: 0.8rem; }
+      .ai-dot { width: 6px; height: 6px; }
     }
   </style>
 </head>
 <body>
   <!-- Loader -->
   <div id="loader" class="loader">
-    <div class="spinner"></div>
-    <h1>#ALAVE</h1>
+    <div class="ai-indicator">
+      <div class="ai-dots">
+        <div class="ai-dot"></div>
+        <div class="ai-dot"></div>
+        <div class="ai-dot"></div>
+      </div>
+    </div>
+    <h1>#Alive</h1>
+    <div class="thinking-text">thinking<span class="thinking-ellipsis"></span></div>
   </div>
 
   <!-- Main Content -->
-  <div id="main-content" style="display: none; transition: opacity 0.15s ease; will-change: opacity;">
+  <div id="main-content" style="display: none; transition: opacity 0.3s ease; will-change: opacity;">
     <header>
       <h2>Alwin Madhu</h2>
       <nav>
@@ -177,6 +228,7 @@
 
     <section class="hero">
       <h1>My Projects</h1>
+      <p class="tagline">Creative Technologist & AI Developer</p>
       <p>Explore a collection of my work, showcasing innovative solutions built with clarity, precision, and simplicity.</p>
       <a href="#projects" class="btn nav-link">View Projects</a>
     </section>
@@ -213,7 +265,7 @@
     </section>
 
     <footer>
-      &copy; 2025 Alwin Madhu. Built with minimalism and purpose.
+      <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Built with love and logic.</p>
     </footer>
   </div>
 
@@ -224,10 +276,12 @@
       const mainContent = document.getElementById('main-content');
       setTimeout(() => {
         loader.style.opacity = '0';
-        loader.style.display = 'none';
-        mainContent.style.display = 'block';
-        mainContent.style.opacity = '1';
-      }, 800);
+        setTimeout(() => {
+          loader.style.display = 'none';
+          mainContent.style.display = 'block';
+          mainContent.style.opacity = '1';
+        }, 300);
+      }, 2000); // Extended for "thinking" effect
     });
 
     // Smooth scrolling for navigation
