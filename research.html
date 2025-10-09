@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Security: Content Security Policy (CSP) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com; connect-src 'self';">
+  <!-- Security: Prevent clickjacking -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <!-- Security: Prevent MIME type sniffing -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <!-- Security: Strict referrer policy -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- SEO Metadata -->
+  <meta name="description" content="Research papers by Alwin Madhu — exploring AI, robotics, and human-computer interaction. Discover Digitizing Touch with an Artificial Multimodal Fingertip and more.">
+  <meta name="keywords" content="Alwin Madhu, research, AI, creative technologist, robotics, human-computer interaction, Digitizing Touch, Digit 360, open source, India">
+  <meta name="author" content="Alwin Madhu">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Alwin Madhu — Research">
+  <meta property="og:description" content="Explore Alwin Madhu's research in AI, robotics, and human-computer interaction, including Digitizing Touch with an Artificial Multimodal Fingertip.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/alwin-m/Portfolio/main/preview-image.jpg">
+  <meta property="og:url" content="https://alwin-m.github.io/Portfolio/research.html">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alwin Madhu — Research">
+  <meta name="twitter:description" content="Discover Alwin Madhu's research papers in AI, robotics, and creative technology.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/alwin-m/Portfolio/main/preview-image.jpg">
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://alwin-m.github.io/Portfolio/research.html">
+  <!-- JSON-LD Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Alwin Madhu — Research",
+    "url": "https://alwin-m.github.io/Portfolio/research.html",
+    "description": "A collection of research papers by Alwin Madhu, focusing on AI, robotics, and human-computer interaction, including Digitizing Touch with an Artificial Multimodal Fingertip.",
+    "creator": {
+      "@type": "Person",
+      "name": "Alwin Madhu",
+      "url": "https://alwin-m.github.io/Portfolio/",
+      "image": "https://raw.githubusercontent.com/alwin-m/Portfolio/main/profile.jpg",
+      "sameAs": [
+        "https://github.com/alwin-m",
+        "https://www.linkedin.com/in/alwinmadhu7/"
+      ],
+      "jobTitle": "Creative Technologist & AI Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independent"
+      },
+      "description": "Developer and creative thinker exploring the intersection of AI, technology, and design.",
+      "knowsAbout": ["Artificial Intelligence", "Web Development", "Human-Computer Interaction", "Robotics", "Creative Technology"]
+    }
+  }
+  </script>
+  <!-- Preload Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" integrity="sha384-8F1c8n/9O9U6J5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5z" crossorigin="anonymous">
+  <title>Alwin Madhu – Research</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif;}
+    body {background-color: #fff; color: #111; line-height: 1.8; overflow-x: hidden; scroll-behavior: smooth;}
+    a {text-decoration: none; color: #111; transition: opacity 0.2s;}
+    a:hover {opacity: 0.7;}
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 60px; position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px);
+      border-bottom: 1px solid #f0f0f0;
+    }
+    header h2 {letter-spacing: 0.5px; cursor: pointer; font-weight: 500; font-size: 1.4rem;}
+    nav a {margin-left: 25px; font-weight: 400; font-size: 1rem; position: relative;}
+    nav a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+      background: #111; transition: width 0.2s;
+    }
+    nav a:hover::after {width: 100%;}
+    .hero {
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      height: 100vh; text-align: center; background: #fff;
+      padding: 0 20px; animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 {font-size: 3.5rem; margin-bottom: 15px; font-weight: 400; color: #000; letter-spacing: -0.5px;}
+    .hero .tagline {font-size: 1.2rem; color: #333; font-weight: 300; margin-bottom: 15px;}
+    .hero p {font-size: 1.1rem; max-width: 650px; color: #333; font-weight: 300;}
+    .btn {margin-top: 30px; padding: 12px 35px; border: 1px solid #111; color: #111; border-radius: 50px; transition: 0.2s; font-weight: 400; font-size: 1rem;}
+    .btn:hover {background: #111; color: #fff;}
+    section {padding: 100px 50px; max-width: 1100px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.6s ease; background: #fff;}
+    section.visible {opacity: 1; transform: translateY(0);}
+    .research {display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; margin-top: 50px;}
+    .research-item {
+      background: #fafafa; border-radius: 16px; padding: 40px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #f0f0f0;
+    }
+    .research-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
+    .research-item h3 {color: #000; margin-bottom: 10px; font-weight: 400; font-size: 1.2rem;}
+    .research-item p {color: #444; font-size: 0.95rem; font-weight: 300;}
+    .research-links {margin-top: 15px;}
+    .research-links a {margin-right: 15px; font-weight: 400; font-size: 0.95rem;}
+    .research-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: block;
+    }
+    footer {text-align: center; padding: 50px; color: #777; border-top: 1px solid #f0f0f0; background: #fff; font-weight: 300; font-size: 0.9rem;}
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+      will-change: opacity;
+    }
+    .ai-indicator {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: slideInUp 0.6s ease-out 0.2s forwards;
+    }
+    .ai-dots {
+      display: flex;
+      gap: 4px;
+    }
+    .ai-dot {
+      width: 8px;
+      height: 8px;
+      background: #111;
+      border-radius: 50%;
+      animation: aiBounce 1.5s ease-in-out infinite;
+    }
+    .ai-dot:nth-child(1) { animation-delay: 0s; }
+    .ai-dot:nth-child(2) { animation-delay: 0.2s; }
+    .ai-dot:nth-child(3) { animation-delay: 0.4s; }
+    .loader h1 {
+      font-size: 1.6rem;
+      color: #111;
+      font-weight: 200;
+      letter-spacing: 0.3px;
+      opacity: 0;
+      animation: fadeText 0.6s ease-out 0.8s forwards;
+    }
+    .thinking-text {
+      font-size: 0.9rem;
+      color: #666;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+      opacity: 0;
+      animation: fadeText 0.6s ease-out 1.2s forwards;
+    }
+    .thinking-ellipsis::after {
+      content: '';
+      display: inline-block;
+      animation: ellipsis 1.5s ease-in-out infinite;
+    }
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes aiBounce {
+      0%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-4px); }
+    }
+    @keyframes fadeText {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes ellipsis {
+      0% { content: ''; }
+      33% { content: '.'; }
+      66% { content: '..'; }
+      100% { content: '...'; }
+    }
+    @media (max-width: 768px) {
+      header {flex-direction: column; padding: 12px 20px;}
+      nav a {margin: 8px; font-size: 0.9rem;}
+      .hero h1 {font-size: 2.2rem;}
+      .hero .tagline {font-size: 1rem;}
+      section {padding: 80px 20px;}
+      .loader h1 { font-size: 1.2rem; }
+      .thinking-text { font-size: 0.8rem; }
+      .ai-dot { width: 6px; height: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="ai-indicator">
+      <div class="ai-dots">
+        <div class="ai-dot"></div>
+        <div class="ai-dot"></div>
+        <div class="ai-dot"></div>
+      </div>
+    </div>
+    <h1>#Alive</h1>
+    <div class="thinking-text">thinking<span class="thinking-ellipsis"></span></div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" style="display: none; transition: opacity 0.3s ease; will-change: opacity;">
+    <header>
+      <h2>Alwin Madhu</h2>
+      <nav>
+        <a href="index.html" class="nav-link">Back</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>My Research</h1>
+      <p class="tagline">Creative Technologist & AI Developer</p>
+      <p>Explore my research papers and documentation, focusing on AI, robotics, and human-computer interaction, designed with clarity and innovation.</p>
+      <a href="#research" class="btn nav-link">View Research</a>
+    </section>
+
+    <section id="research">
+      <h2>Research Papers</h2>
+      <div class="research">
+        <div class="research-item">
+          <img src="https://raw.githubusercontent.com/alwin-m/Portfolio/main/DigitizingTouch.png" alt="Digitizing Touch Research" class="research-img">
+          <h3>Digitizing Touch with an Artificial Multimodal Fingertip</h3>
+          <p>Digit 360 is an advanced artificial fingertip integrating visuotactile imaging, pressure, vibration, temperature, and gas sensing. With superhuman performance, it resolves 7 μm spatial features and detects millinewton forces, enabling applications in robotics, prosthetics, and virtual reality. Published as an open research platform.</p>
+          <div class="research-links">
+            <a href="https://raw.githubusercontent.com/alwin-m/Portfolio/main/DigitizingTouch.pdf" target="_blank" rel="noopener noreferrer">Download PDF ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Built with love and logic.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const mainContent = document.getElementById('main-content');
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+          mainContent.style.display = 'block';
+          mainContent.style.opacity = '1';
+        }, 300);
+      }, 2000);
+    });
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        if (href === 'index.html') {
+          window.location.href = href;
+        } else {
+          const targetId = href.substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 70,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+
+    // Section reveal with debounce
+    const sections = document.querySelectorAll('section');
+    let isScrolling;
+    const revealOnScroll = () => {
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            sec.classList.add('visible');
+          }
+        });
+      }, 50);
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>
