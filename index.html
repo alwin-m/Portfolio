@@ -51,7 +51,7 @@
   </script>
   <!-- Preload Google Fonts -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" integrity="sha384-8F1c8n/9O9U6J5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" crossorigin="anonymous">
   <title>Alwin Madhu – Portfolio</title>
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif;}
@@ -74,14 +74,14 @@
     .hero {
       display: flex; flex-direction: column; justify-content: center; align-items: center;
       height: 100vh; text-align: center; background: #fff;
-      padding: 0 20px; animation: fadeIn 1.2s ease-in;
+      padding: 0 20px; animation: fadeIn 0.8s ease-out;
     }
     .hero h1 {font-size: 3.5rem; margin-bottom: 15px; font-weight: 400; color: #000; letter-spacing: -0.5px;}
     .hero .tagline {font-size: 1.2rem; color: #333; font-weight: 300; margin-bottom: 15px;}
     .hero p {font-size: 1.1rem; max-width: 650px; color: #333; font-weight: 300;}
     .btn {margin-top: 30px; padding: 12px 35px; border: 1px solid #111; color: #111; border-radius: 50px; transition: 0.2s; font-weight: 400; font-size: 1rem;}
     .btn:hover {background: #111; color: #fff;}
-    section {padding: 100px 50px; max-width: 1100px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.6s ease; background: #fff;}
+    section {padding: 100px 50px; max-width: 1100px; margin: auto; opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; background: #fff;}
     section.visible {opacity: 1; transform: translateY(0);}
     .about p {margin-bottom: 15px; color: #333; font-size: 1rem; font-weight: 300;}
     .projects, .research {display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; margin-top: 50px;}
@@ -109,47 +109,7 @@
     #contact {text-align: center;}
     footer {text-align: center; padding: 50px; color: #777; border-top: 1px solid #f0f0f0; background: #fff; font-weight: 300; font-size: 0.9rem;}
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(15px);} to {opacity: 1; transform: translateY(0);}
-    }
-    .loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      transition: opacity 0.15s ease;
-      will-change: opacity;
-    }
-    .loader .spinner {
-      width: 18px;
-      height: 18px;
-      border: 1px solid #111;
-      border-top: 1px solid transparent;
-      border-radius: 50%;
-      animation: spin 0.5s linear infinite;
-      margin-bottom: 6px;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .loader h1 {
-      font-size: 1.6rem;
-      color: #111;
-      font-weight: 200;
-      letter-spacing: 0.3px;
-      opacity: 0;
-      animation: fadeText 0.4s ease-in forwards;
-    }
-    @keyframes fadeText {
-      from { opacity: 0; }
-      to { opacity: 0.6; }
+      from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);}
     }
     @media (max-width: 768px) {
       header {flex-direction: column; padding: 12px 20px;}
@@ -157,20 +117,12 @@
       .hero h1 {font-size: 2.2rem;}
       .hero .tagline {font-size: 1rem;}
       section {padding: 80px 20px;}
-      .loader h1 { font-size: 1.2rem; }
-      .loader .spinner { width: 14px; height: 14px; }
     }
   </style>
 </head>
 <body>
-  <!-- Loader -->
-  <div id="loader" class="loader">
-    <div class="spinner"></div>
-    <h1>#Alive</h1>
-  </div>
-
-  <!-- Main Content -->
-  <div id="main-content" style="display: none; transition: opacity 0.15s ease; will-change: opacity;">
+  <!-- Main Content (No loader – instant reveal) -->
+  <div id="main-content">
     <header>
       <h2>Alwin Madhu</h2>
       <nav>
@@ -180,20 +132,17 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </header>
-
     <section class="hero">
       <h1>Hi, I’m Alwin Madhu</h1>
       <p class="tagline">Creative Technologist & AI Developer</p>
       <p>Computer Engineer & Developer | AWS Certified | Open Source Enthusiast | Designing technology with clarity, precision, and simplicity.</p>
       <a href="#projects" class="btn nav-link">Explore My Work</a>
     </section>
-
     <section id="about">
       <h2>About Me</h2>
       <p>I’m <strong>Alwin Madhu</strong>, a Computer Engineer passionate about minimalism, open-source, and creating impactful digital experiences. My work merges engineering with design, focusing on clarity, functionality, and timeless aesthetics.</p>
       <p>Certified in AWS Data Center operations, comfortable across Linux and Windows systems, and an active contributor to open-source ecosystems. I believe simplicity is the ultimate sophistication.</p>
     </section>
-
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="projects">
@@ -219,7 +168,6 @@
         <a href="projects.html" class="btn nav-link">See More Projects</a>
       </div>
     </section>
-
     <section id="research">
       <h2>Research Papers</h2>
       <div class="research">
@@ -236,7 +184,6 @@
         <a href="research.html" class="btn nav-link">See More Research</a>
       </div>
     </section>
-
     <section id="contact">
       <h2>Get In Touch</h2>
       <p>Let’s collaborate on elegant and innovative technologies.</p>
@@ -244,25 +191,11 @@
       <p>GitHub: <a href="https://github.com/alwin-m" target="_blank" rel="noopener noreferrer">github.com/alwin-m</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/alwinmadhu7/" target="_blank" rel="noopener noreferrer">linkedin.com/in/alwinmadhu7/</a></p>
     </section>
-
     <footer>
-      <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Built with love and logic.</p>
+      <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Built with love and logic.<br><small>Last updated: November 02, 2025</small></p>
     </footer>
   </div>
-
   <script>
-    // Loader
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      const mainContent = document.getElementById('main-content');
-      setTimeout(() => {
-        loader.style.opacity = '0';
-        loader.style.display = 'none';
-        mainContent.style.display = 'block';
-        mainContent.style.opacity = '1';
-      }, 800);
-    });
-
     // Smooth scrolling for navigation
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -282,24 +215,20 @@
         }
       });
     });
-
-    // Section reveal with debounce
+    // Section reveal on scroll (lighter & faster)
     const sections = document.querySelectorAll('section');
-    let isScrolling;
     const revealOnScroll = () => {
-      clearTimeout(isScrolling);
-      isScrolling = setTimeout(() => {
-        sections.forEach(sec => {
-          const rect = sec.getBoundingClientRect();
-          if (rect.top < window.innerHeight - 100) {
-            sec.classList.add('visible');
-          }
-        });
-      }, 50);
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < triggerBottom) {
+          sec.classList.add('visible');
+        }
+      });
     };
     window.addEventListener('scroll', revealOnScroll);
+    // Trigger immediately for above-the-fold content
     revealOnScroll();
   </script>
 </body>
 </html>
-
