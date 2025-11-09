@@ -57,7 +57,7 @@
   </script>
   <!-- Preload Google Fonts -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" integrity="sha384-8F1c8n/9O9U6J5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" integrity="sha384-8F1c8n/9O9U6J5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5zG5z" crossorigin="anonymous">
   <title>Alwin Madhu – Projects</title>
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif;}
@@ -216,7 +216,6 @@
     <h1>#Alive</h1>
     <div class="thinking-text">thinking<span class="thinking-ellipsis"></span></div>
   </div>
-
   <!-- Main Content -->
   <div id="main-content" style="display: none; transition: opacity 0.3s ease; will-change: opacity;">
     <header>
@@ -225,14 +224,12 @@
         <a href="index.html" class="nav-link">Back</a>
       </nav>
     </header>
-
     <section class="hero">
       <h1>My Projects</h1>
       <p class="tagline">Creative Technologist & AI Developer</p>
       <p>Explore a collection of my work, showcasing innovative solutions built with clarity, precision, and simplicity.</p>
       <a href="#projects" class="btn nav-link">View Projects</a>
     </section>
-
     <section id="projects">
       <h2>All Projects</h2>
       <div class="projects">
@@ -261,14 +258,21 @@
             <a href="https://github.com/alwin-m/bluemind" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
+        <!-- NEW PROJECT: Megamind -->
+        <div class="project">
+          <img src="https://raw.githubusercontent.com/alwin-m/Portfolio/main/Megamind.PNG" alt="Megamind Project" class="project-img">
+          <h3>Megamind (M-E-G-A-M-I-N-D)</h3>
+          <p>A lightweight personal AI assistant that runs on Llama 3. Designed for seamless, local-first interactions with minimal resource overhead, bringing smart, responsive help right to your device.</p>
+          <div class="project-links">
+            <a href="https://github.com/alwin-m/Megamind" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </div>
       </div>
     </section>
-
     <footer>
       <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Built with love and logic.</p>
     </footer>
   </div>
-
   <script>
     // Loader
     window.addEventListener('load', () => {
@@ -283,7 +287,6 @@
         }, 300);
       }, 2000); // Extended for "thinking" effect
     });
-
     // Smooth scrolling for navigation
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -303,7 +306,6 @@
         }
       });
     });
-
     // Section reveal with debounce
     const sections = document.querySelectorAll('section');
     let isScrolling;
