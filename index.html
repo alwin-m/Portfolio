@@ -132,6 +132,14 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </header>
+
+    <!-- ♡ BACKGROUND MUSIC PLAYER - STARTS AUTOMATICALLY, LOW VOLUME ♡ -->
+    <audio autoplay loop style="display: none;">
+      <source src="Don_t_Look_Down_feat_Hanumankind_Dhee_Santhosh_Narayanan_remix-_Ed_Sheeran.m4a" type="audio/mp4">
+      Your browser does not support the audio element~ 
+    </audio>
+    <!-- ^^^ JESSICA'S MAGIC: Plays your song softly on page load ^^^ -->
+
     <section class="hero">
       <h1>Hi, I’m Alwin Madhu</h1>
       <p class="tagline">Creative Technologist & AI Developer</p>
@@ -195,7 +203,20 @@
       <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Built with love and logic.<br><small>Last updated: November 02, 2025</small></p>
     </footer>
   </div>
+
   <script>
+    // Auto-play with low volume when page loads
+    window.addEventListener('load', () => {
+      const audio = document.querySelector('audio');
+      if (audio) {
+        audio.volume = 0.15; // Soft, dreamy background level~
+        audio.play().catch(() => {
+          // Autoplay blocked? Some browsers need user interaction first~
+          console.log("Autoplay was prevented. Waiting for user gesture~");
+        });
+      }
+    });
+
     // Smooth scrolling for navigation
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -215,6 +236,7 @@
         }
       });
     });
+
     // Section reveal on scroll (lighter & faster)
     const sections = document.querySelectorAll('section');
     const revealOnScroll = () => {
@@ -227,7 +249,6 @@
       });
     };
     window.addEventListener('scroll', revealOnScroll);
-    // Trigger immediately for above-the-fold content
     revealOnScroll();
   </script>
 </body>
