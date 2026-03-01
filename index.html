@@ -20,21 +20,21 @@
     content="accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'">
   <!-- SEO Metadata -->
   <meta name="description"
-    content="Portfolio of Alwin Madhu — a creative developer passionate about AI, technology, and digital innovation. Explore my projects, research, and design philosophy.">
+    content="Portfolio of Alwin Madhu (Jeen) — Computer Engineer, AWS Certified Developer & Creative Technologist. Explore my AI projects, research, and innovative solutions in technology.">
   <meta name="keywords"
-    content="Alwin Madhu, portfolio, developer, AI, creative technologist, projects, research, India, web developer, personal site">
+    content="Alwin Madhu, Jeen, portfolio, computer engineer, AI developer, creative technologist, AWS certified, menstrual cycle tracker, LIORA, projects, research, India">
   <meta name="author" content="Alwin Madhu">
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Alwin Madhu — Portfolio">
+  <meta property="og:title" content="Alwin Madhu (Jeen) — Creative Technologist & AI Engineer">
   <meta property="og:description"
-    content="Discover the projects and research of Alwin Madhu, an AI-focused creative technologist and developer.">
+    content="Computer Engineer & AI Developer. AWS Certified. Creator of LIORA (menstrual cycle tracker) and innovative open-source projects.">
   <meta property="og:image" content="https://raw.githubusercontent.com/alwin-m/Portfolio/main/preview-image.jpg">
   <meta property="og:url" content="https://alwin-m.github.io/Portfolio/">
   <meta property="og:type" content="website">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alwin Madhu — Portfolio">
-  <meta name="twitter:description" content="Explore my work, thoughts, and research in technology and AI.">
+  <meta name="twitter:title" content="Alwin Madhu — AI Engineer & Creative Technologist">
+  <meta name="twitter:description" content="Computer Engineer | AWS Certified | Creator of LIORA Period Tracker | Open-Source Projects">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/alwin-m/Portfolio/main/preview-image.jpg">
   <!-- Canonical Link -->
   <link rel="canonical" href="https://alwin-m.github.io/Portfolio/">
@@ -44,19 +44,39 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Alwin Madhu",
+    "alternateName": "Jeen",
     "url": "https://alwin-m.github.io/Portfolio/",
     "image": "https://raw.githubusercontent.com/alwin-m/Portfolio/main/profile.jpg",
+    "email": "Alwinmadhu7@gmail.com",
     "sameAs": [
       "https://github.com/alwin-m",
       "https://www.linkedin.com/in/alwinmadhu7/"
     ],
-    "jobTitle": "Creative Technologist & AI Developer",
+    "jobTitle": "Computer Engineer & AI Developer",
     "worksFor": {
       "@type": "Organization",
       "name": "Independent"
     },
-    "description": "Developer and creative thinker exploring the intersection of AI, technology, and design.",
-    "knowsAbout": ["Artificial Intelligence", "Web Development", "Human-Computer Interaction", "Creative Technology"]
+    "description": "Computer Engineering Student | AWS Certified | Creator of LIORA Menstrual Cycle Tracker | Open-Source Developer focused on AI, healthcare technology, and digital innovation.",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Certification"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Web Development",
+      "Mobile Development",
+      "Android Development",
+      "Healthcare Technology",
+      "Menstrual Health",
+      "Open Source Software",
+      "Human-Computer Interaction",
+      "Creative Technology",
+      "Python",
+      "JavaScript",
+      "Flutter",
+      "React"
+    ]
   }
   </script>
   <!-- Preload Google Fonts -->
@@ -144,7 +164,7 @@
       text-align: center;
       background: #fff;
       padding: 0 20px;
-      animation: fadeIn 0.8s ease-out;
+      animation: fadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .hero h1 {
@@ -153,20 +173,38 @@
       font-weight: 400;
       color: #000;
       letter-spacing: -0.5px;
+      animation: slideInDown 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .hero .tagline {
-      font-size: 1.2rem;
-      color: #333;
-      font-weight: 300;
-      margin-bottom: 15px;
+      font-size: 1.3rem;
+      color: #0066CC;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #444;
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: 0.2px;
+      animation: fadeInUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
     }
 
     .hero p {
-      font-size: 1.1rem;
-      max-width: 650px;
+      font-size: 1.05rem;
+      max-width: 700px;
       color: #333;
       font-weight: 300;
+      line-height: 1.7;
+      animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+    }
+
+    .about-content ul {
+      margin: 0;
+      list-style: none;
     }
 
     .btn {
@@ -175,14 +213,17 @@
       border: 1px solid #111;
       color: #111;
       border-radius: 50px;
-      transition: 0.2s;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       font-weight: 400;
       font-size: 1rem;
+      animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
     }
 
     .btn:hover {
       background: #111;
       color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     section {
@@ -190,8 +231,8 @@
       max-width: 1100px;
       margin: auto;
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.5s ease-out;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       background: #fff;
     }
 
@@ -260,11 +301,14 @@
     .project-img,
     .research-img {
       width: 100%;
+      height: auto;
+      max-width: 100%;
       aspect-ratio: 1/1;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 15px;
       display: block;
+      animation: fadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     #contact {
@@ -378,9 +422,28 @@
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(10px);
       }
+      to {
+        opacity: 1;
+      }
+    }
 
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
       to {
         opacity: 1;
         transform: translateY(0);
@@ -408,10 +471,14 @@
       }
 
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .hero .tagline {
+        font-size: 1.1rem;
+      }
+
+      .hero-subtitle {
         font-size: 1rem;
       }
 
@@ -429,22 +496,46 @@
       }
 
       .leora-btn {
-        padding: 10px 25px;
-        font-size: 0.9rem;
+        padding: 11px 28px;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
       }
     }
 
     @media (max-width: 480px) {
       header h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+      }
+
+      header {
+        padding: 10px 15px;
       }
 
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+
+      .hero .tagline {
+        font-size: 1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .hero p {
+        font-size: 0.95rem;
       }
 
       section {
         padding: 40px 15px;
+      }
+
+      .btn {
+        padding: 11px 30px;
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -454,7 +545,7 @@
   <!-- Main Content (No loader – instant reveal) -->
   <div id="main-content">
     <header>
-      <h2 onclick="window.scrollTo({top:0, behavior:'smooth'})" style="cursor:pointer;">Alwin Madhu</h2>
+      <h2>Alwin Madhu</h2>
       <nav id="nav-desktop">
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
@@ -474,19 +565,28 @@
     </header>
 
     <section class="hero">
-      <h1>Hi, I’m Alwin Madhu</h1>
-      <p class="tagline">Creative Technologist & AI Developer</p>
-      <p>Computer Engineer & Developer | AWS Certified | Open Source Enthusiast | Designing technology with clarity,
-        precision, and simplicity.</p>
-      <a href="#projects" class="btn nav-link">Explore My Work</a>
+      <h1>Alwin Madhu</h1>
+      <p class="hero-subtitle">Computer Engineer &amp; AI Developer | AWS Certified</p>
+      <p>Passionate about creating innovative solutions in healthcare technology, open-source software, and artificial intelligence. Creator of <strong>LIORA</strong> — a privacy-focused menstrual cycle tracking application serving thousands of users.</p>
+      <a href="#about" class="btn nav-link">Learn About Me</a>
     </section>
     <section id="about">
       <h2>About Me</h2>
-      <p>I’m <strong>Alwin Madhu</strong>, a Computer Engineer passionate about minimalism, open-source, and creating
-        impactful digital experiences. My work merges engineering with design, focusing on clarity, functionality, and
-        timeless aesthetics.</p>
-      <p>Certified in AWS Data Center operations, comfortable across Linux and Windows systems, and an active
-        contributor to open-source ecosystems. I believe simplicity is the ultimate sophistication.</p>
+      <div class="about-content">
+        <p>I'm <strong>Alwin Madhu</strong>, a passionate Computer Engineer and creative technologist dedicated to solving real-world problems through technology. My work bridges the gap between engineering precision and thoughtful design, with a focus on creating solutions that are accessible, secure, and user-centric.</p>
+        
+        <h3 style="font-weight: 500; font-size: 1.1rem; margin-top: 25px; margin-bottom: 15px; color: #111;">Key Expertise</h3>
+        <ul style="margin-left: 20px; color: #333; font-weight: 300;">
+          <li style="margin-bottom: 8px;">🔐 <strong>Healthcare Technology</strong> — Creator of LIORA, a privacy-focused menstrual cycle tracking app with thousands of users</li>
+          <li style="margin-bottom: 8px;">🤖 <strong>Artificial Intelligence</strong> — Published research on AI applications and digital innovation</li>
+          <li style="margin-bottom: 8px;">📱 <strong>Mobile Development</strong> — Full-stack Android and Flutter development for end-to-end applications</li>
+          <li style="margin-bottom: 8px;">☁️ <strong>AWS Certified</strong> — Data center operations and cloud infrastructure knowledge</li>
+          <li style="margin-bottom: 8px;">🌍 <strong>Open Source</strong> — Active contributor to open-source projects and community-driven development</li>
+          <li style="margin-bottom: 8px;">🎨 <strong>Design Philosophy</strong> — Minimalist aesthetics, thoughtful UX, and timeless design principles</li>
+        </ul>
+
+        <p style="margin-top: 25px; color: #666;">I believe in creating technology that respects user privacy, embraces simplicity, and makes a genuine impact. Whether it's building healthcare applications that empower millions or contributing to open-source ecosystems, I'm committed to engineering solutions that matter.</p>
+      </div>
     </section>
     <section id="projects">
       <h2>Featured Projects</h2>
@@ -540,9 +640,8 @@
       </div>
     </section>
     <section id="leora-download-section">
-      <h2>Download Liora</h2>
-      <p style="text-align: center; margin-bottom: 50px; color: #666;">Our new Android application is now available for
-        download. Get the latest version directly from here.</p>
+      <h2>LIORA — Menstrual Cycle Tracker</h2>
+      <p style="text-align: center; margin-bottom: 50px; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">A privacy-focused, open-source Android application for accurate menstrual cycle tracking and predictions. Secure, completely free, and with zero ads. Download the latest version today.</p>
       <div class="leora-container">
         <div class="leora-card">
           <div class="leora-card-header">
@@ -581,61 +680,11 @@
           rel="noopener noreferrer">linkedin.com/in/alwinmadhu7/</a></p>
     </section>
     <footer>
-      <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Built with love and logic.<br><small>Last updated:
-          November 02, 2025</small></p>
+      <p>&copy; 2025 Alwin Madhu — AI Developer & Technologist. Building new logics.<br><small>Last updated: March 1, 2026</small></p>
     </footer>
   </div>
 
-  <script>
-    // Mobile navigation toggle
-    const navToggle = document.getElementById('nav-mobile-toggle');
-    const navMobile = document.getElementById('nav-mobile');
-    if (navToggle) {
-      navToggle.addEventListener('click', () => {
-        navMobile.style.display = navMobile.style.display === 'none' ? 'flex' : 'none';
-      });
-      document.querySelectorAll('#nav-mobile a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMobile.style.display = 'none';
-        });
-      });
-    }
-
-
-
-    // Smooth scrolling for navigation
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href.includes('.html')) {
-          return; // Allow normal navigation for external pages
-        }
-        e.preventDefault();
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 70,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Section reveal on scroll (lighter & faster)
-    const sections = document.querySelectorAll('section');
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      sections.forEach(sec => {
-        const secTop = sec.getBoundingClientRect().top;
-        if (secTop < triggerBottom) {
-          sec.classList.add('visible');
-        }
-      });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-  </script>
+  <script src="assets/js/scripts.js" defer></script>
 </body>
 
 </html>
