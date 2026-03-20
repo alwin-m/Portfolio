@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self';">
+  <meta name="description" content="Alwin Madhu — Computer Engineer, AI Developer, Creator of LIORA. Portfolio & Online CV.">
+  <meta name="keywords" content="Alwin Madhu, Jeen, portfolio, AI developer, LIORA, computer engineer, AWS certified, Kerala">
+  <meta name="author" content="Alwin Madhu">
+  <meta property="og:title" content="Alwin Madhu">
+  <meta property="og:description" content="Computer Engineer & AI Developer. Creator of LIORA.">
+  <meta property="og:url" content="https://alwin-m.github.io/Portfolio/">
+  <link rel="canonical" href="https://alwin-m.github.io/Portfolio/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <title>Alwin Madhu</title>
+  <style>
+    /* ── Tokens ───────────────────────────────────── */
+    :root {
+      --w: #ffffff;
+      --ow: #f7f7f5;
+      --blk: #090909;
+      --g1: #f0f0ee;
+      --g2: #e2e2df;
+      --g4: #9e9e98;
+      --g6: #696963;
+      --g8: #2a2a26;
+      --f: 'Inter', system-ui, sans-serif;
+      --m: 'DM Mono', monospace;
+      --e: cubic-bezier(0.16,1,0.3,1);
+    }
+
+    /* ── Reset ────────────────────────────────────── */
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%;}
+    body{font-family:var(--f);background:var(--w);color:var(--blk);line-height:1;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    img{display:block;max-width:100%;}
+    a,button{-webkit-tap-highlight-color:transparent;}
+
+    /* ── Cursor (pointer devices only) ───────────── */
+    @media(hover:hover)and(pointer:fine){
+      body,a,button{cursor:none;}
+    }
+    #cur{position:fixed;width:8px;height:8px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .18s var(--e),height .18s var(--e);}
+    #ring{position:fixed;width:30px;height:30px;border:1px solid rgba(255,255,255,.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .35s var(--e),height .35s var(--e);}
+    body.on-link #cur{width:12px;height:12px;}
+    body.on-link #ring{width:48px;height:48px;}
+
+    /* ── Nav ──────────────────────────────────────── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;transition:background .3s,backdrop-filter .3s;}
+    nav.bg{background:rgba(255,255,255,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+    .logo{font-size:12px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--blk);text-decoration:none;}
+    .nl{display:flex;gap:40px;list-style:none;}
+    .nl a{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--g6);text-decoration:none;transition:color .25s;}
+    .nl a:hover{color:var(--blk);}
+    .ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;}
+    .ham span{display:block;width:20px;height:1px;background:var(--blk);transition:transform .3s var(--e);}
+    .mnav{display:none;position:fixed;inset:0;background:var(--w);z-index:99;flex-direction:column;justify-content:center;align-items:center;gap:36px;opacity:0;transition:opacity .4s var(--e);}
+    .mnav.on{opacity:1;}
+    .mnav a{font-size:clamp(26px,5.5vw,48px);font-weight:100;letter-spacing:-.03em;color:var(--blk);text-decoration:none;}
+
+    /* ── Hero ─────────────────────────────────────── */
+    .hero{height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 64px;position:relative;}
+
+    .hero-label{font-family:var(--m);font-size:10px;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--g4);margin-bottom:32px;display:flex;align-items:center;gap:16px;opacity:0;animation:fi 1s var(--e) .3s forwards;}
+    .hero-label::before{content:'';width:36px;height:1px;background:var(--g4);}
+
+    .hero-name{font-size:clamp(64px,11vw,160px);font-weight:100;letter-spacing:-.05em;line-height:.88;overflow:hidden;margin-bottom:0;}
+    .hero-name .ln{display:block;transform:translateY(110%);animation:su 1.2s var(--e) forwards;}
+    .hero-name .ln:nth-child(2){animation-delay:.07s;}
+
+    .hero-bot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:64px;gap:32px;}
+    .hero-sub{font-size:clamp(12px,1.3vw,15px);font-weight:300;line-height:1.75;color:var(--g6);max-width:320px;opacity:0;animation:fi 1s var(--e) .65s forwards;}
+    .hero-link{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--blk);text-decoration:none;display:flex;align-items:center;gap:8px;opacity:0;animation:fi 1s var(--e) .85s forwards;transition:gap .3s var(--e);}
+    .hero-link:hover{gap:16px;}
+    .hero-link::after{content:'↓';font-size:13px;}
+    .hero-num{font-family:var(--m);font-size:10px;color:var(--g4);letter-spacing:.08em;opacity:0;animation:fi 1s var(--e) 1.05s forwards;}
+
+    /* ── Ticker ───────────────────────────────────── */
+    .ticker-wrap{overflow:hidden;border-top:1px solid var(--g2);border-bottom:1px solid var(--g2);padding:12px 0;}
+    .ticker{display:flex;animation:tk 28s linear infinite;white-space:nowrap;}
+    .ti{font-family:var(--m);font-size:10px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--g4);padding:0 40px;flex-shrink:0;}
+    .ti em{color:var(--g6);font-style:normal;}
+
+    /* ── Section shell ────────────────────────────── */
+    section{padding:140px 60px;}
+    .sh{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:88px;}
+    .sl{font-family:var(--m);font-size:10px;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--g4);padding-top:6px;}
+    .st{font-size:clamp(40px,6vw,96px);font-weight:100;letter-spacing:-.045em;line-height:.92;color:var(--blk);max-width:72%;}
+
+    /* ── About ────────────────────────────────────── */
+    #about{background:var(--ow);}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;}
+    .at p{font-size:clamp(14px,1.5vw,17px);font-weight:300;line-height:1.8;color:var(--g8);margin-bottom:22px;}
+
+    /* Skill rows */
+    .rows{margin-top:44px;border-top:1px solid var(--g2);}
+    .row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--g2);}
+    .rn{font-size:13px;font-weight:300;color:var(--blk);}
+    .rt{font-family:var(--m);font-size:10px;letter-spacing:.1em;color:var(--g4);text-transform:uppercase;}
+
+    /* Stats grid */
+    .sg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--g2);border:1px solid var(--g2);margin-top:12px;}
+    .sc{background:var(--ow);padding:36px 30px;}
+    .sv{font-size:44px;font-weight:100;letter-spacing:-.04em;color:var(--blk);line-height:1;margin-bottom:6px;}
+    .sk{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);}
+
+    /* ── Education ────────────────────────────────── */
+    #education{background:var(--w);}
+    .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--g2);border:1px solid var(--g2);}
+    .ec{background:var(--w);padding:52px 48px;transition:background .3s var(--e);}
+    .ec:hover{background:var(--ow);}
+    .ep{font-family:var(--m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--g4);margin-bottom:20px;}
+    .ed{font-size:clamp(18px,2vw,26px);font-weight:200;letter-spacing:-.025em;color:var(--blk);line-height:1.2;margin-bottom:14px;}
+    .es{font-size:13px;font-weight:300;color:var(--g6);line-height:1.65;}
+    .et{margin-top:18px;font-size:13px;font-weight:300;color:var(--g6);line-height:1.65;}
+
+    /* ── Experience ───────────────────────────────── */
+    #experience{background:var(--ow);}
+    .exp-list{border-top:1px solid var(--g2);}
+    .exp{display:grid;grid-template-columns:180px 1fr;gap:60px;padding:52px 0;border-bottom:1px solid var(--g2);}
+    .exp-per{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);padding-top:5px;}
+    .exp-ttl{font-size:clamp(18px,2vw,26px);font-weight:200;letter-spacing:-.025em;color:var(--blk);margin-bottom:10px;}
+    .exp-org{font-size:13px;font-weight:300;color:var(--g6);margin-bottom:14px;}
+    .exp-desc{font-size:13px;font-weight:300;color:var(--g6);line-height:1.65;max-width:520px;}
+
+    /* ── Certifications ──────────────────────────── */
+    #certifications{background:var(--w);}
+    .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--g2);border:1px solid var(--g2);}
+    .cc{background:var(--w);padding:44px 38px;transition:background .3s var(--e);}
+    .cc:hover{background:var(--ow);}
+    .cs{font-family:var(--m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--g4);margin-bottom:18px;}
+    .cn{font-size:clamp(15px,1.6vw,22px);font-weight:200;letter-spacing:-.02em;color:var(--blk);line-height:1.2;margin-bottom:10px;}
+    .ci{font-size:12px;font-weight:300;color:var(--g6);line-height:1.55;}
+
+    /* ── Projects ─────────────────────────────────── */
+    #projects{background:var(--ow);}
+    .pg{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--g2);border:1px solid var(--g2);}
+    .pc{background:var(--ow);padding:48px 44px 0;overflow:hidden;transition:background .35s var(--e);}
+    .pc:hover{background:var(--w);}
+    .pct{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:36px;}
+    .pn{font-family:var(--m);font-size:10px;color:var(--g4);letter-spacing:.1em;}
+    .ptag{font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--g6);background:var(--g1);padding:5px 10px;}
+    .ptitle{font-size:clamp(22px,2.8vw,36px);font-weight:200;letter-spacing:-.03em;color:var(--blk);line-height:1.1;margin-bottom:16px;}
+    .pdesc{font-size:13px;font-weight:300;line-height:1.7;color:var(--g6);margin-bottom:32px;max-width:320px;}
+    .plinks{display:flex;gap:20px;margin-bottom:40px;}
+    .pl{font-size:10px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--blk);text-decoration:none;display:flex;align-items:center;gap:6px;transition:gap .3s var(--e);}
+    .pl:hover{gap:10px;}
+    .pl.dim{color:var(--g4);}
+    .pimg{margin:0 -44px;height:220px;overflow:hidden;}
+    .pimg img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .6s var(--e),filter .4s;}
+    .pc:hover .pimg img{transform:scale(1.04);filter:grayscale(0%);}
+    /* last card no image */
+    .pc.no-img{padding-bottom:48px;}
+
+    /* ── Research ─────────────────────────────────── */
+    #research{background:var(--w);}
+    .rl{border-top:1px solid var(--g2);}
+    .ri{display:grid;grid-template-columns:40px 1fr auto;gap:52px;padding:52px 0;border-bottom:1px solid var(--g2);transition:padding-left .4s var(--e);}
+    .ri:hover{padding-left:18px;}
+    .ridx{font-family:var(--m);font-size:10px;color:var(--g4);letter-spacing:.1em;padding-top:5px;}
+    .rttl{font-size:clamp(17px,2.2vw,30px);font-weight:200;letter-spacing:-.02em;color:var(--blk);line-height:1.2;margin-bottom:14px;}
+    .rmeta{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+    .rtype{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);}
+    .rdesc{font-size:12px;font-weight:300;color:var(--g6);line-height:1.6;}
+    .ract{padding-top:4px;}
+    .rlink{font-size:10px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--blk);text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap;transition:gap .3s var(--e);}
+    .rlink:hover{gap:10px;}
+
+    /* ── LIORA dark ───────────────────────────────── */
+    #liora{background:var(--blk);}
+    #liora .sl{color:rgba(255,255,255,.28);}
+    #liora .st{color:#fff;}
+    .lb{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start;}
+    .ldesc{font-size:clamp(14px,1.5vw,17px);font-weight:300;line-height:1.8;color:rgba(255,255,255,.45);margin-bottom:44px;}
+    .lcta{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.18);padding:16px 28px;transition:background .3s,border-color .3s,gap .3s var(--e);}
+    .lcta:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.38);gap:18px;}
+    .ls{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(255,255,255,.07);}
+    .lst{background:var(--blk);padding:32px 40px;border:1px solid rgba(255,255,255,.07);border-bottom:0;}
+    .lst:last-child{border-bottom:1px solid rgba(255,255,255,.07);}
+    .lsv{font-size:32px;font-weight:100;letter-spacing:-.04em;color:#fff;line-height:1;margin-bottom:6px;}
+    .lsk{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+
+    /* ── Contact ──────────────────────────────────── */
+    #contact{background:var(--w);min-height:56vh;display:flex;flex-direction:column;justify-content:center;text-align:center;}
+    .cttl{font-size:clamp(44px,9vw,128px);font-weight:100;letter-spacing:-.055em;line-height:.88;margin-bottom:56px;}
+    .clinks{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;}
+    .clink{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--g6);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .3s,gap .3s var(--e);}
+    .clink:hover{color:var(--blk);gap:10px;}
+
+    /* ── Footer ───────────────────────────────────── */
+    footer{border-top:1px solid var(--g2);padding:36px 60px;display:flex;justify-content:space-between;align-items:center;}
+    .fc{font-family:var(--m);font-size:10px;color:var(--g4);letter-spacing:.08em;}
+    .fl{display:flex;gap:28px;}
+    .fl a{font-size:10px;color:var(--g4);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .25s;}
+    .fl a:hover{color:var(--blk);}
+
+    /* ── Animations ───────────────────────────────── */
+    @keyframes su{to{transform:translateY(0);}}
+    @keyframes fi{to{opacity:1;}}
+    @keyframes tk{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+    /* ── Reveal ───────────────────────────────────── */
+    .rv{opacity:0;transform:translateY(36px);transition:opacity .9s var(--e),transform .9s var(--e);}
+    .rv.in{opacity:1;transform:none;}
+
+    /* ── Responsive ───────────────────────────────── */
+    @media(max-width:960px){
+      nav{padding:24px 32px;}
+      .nl{display:none;}
+      .ham{display:flex;}
+      .hero,.hero-bot,.cttl,section{padding-left:32px;padding-right:32px;}
+      section{padding-top:100px;padding-bottom:100px;}
+      .sh{margin-bottom:60px;}
+      .st{max-width:100%;}
+      .about-grid{grid-template-columns:1fr;gap:60px;}
+      .edu-grid,.pg,.cert-grid{grid-template-columns:1fr;}
+      .exp{grid-template-columns:1fr;gap:10px;}
+      .lb{grid-template-columns:1fr;gap:56px;}
+      .ri{grid-template-columns:auto 1fr;gap:24px;}
+      .ract{display:none;}
+      footer{flex-direction:column;gap:20px;text-align:center;}
+    }
+    @media(max-width:640px){
+      nav{padding:20px;}
+      .hero{padding-left:20px;padding-right:20px;padding-bottom:48px;}
+      section{padding:72px 20px;}
+      .sh{flex-direction:column;gap:12px;margin-bottom:48px;}
+      .hero-bot{flex-direction:column;align-items:flex-start;gap:16px;margin-top:48px;}
+      .sg{grid-template-columns:1fr 1fr;}
+      .pimg{height:180px;}
+      .ec{padding:36px 24px;}
+      .cc{padding:36px 24px;}
+      .pc{padding:36px 24px 0;}
+      .pimg{margin:0 -24px;height:170px;}
+      .clinks{gap:20px;}
+      footer{padding:28px 20px;}
+      .fl{flex-wrap:wrap;justify-content:center;gap:16px;}
+    }
+  </style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="ring"></div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="index.html" class="logo">Alwin Madhu</a>
+  <ul class="nl">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#liora">LIORA</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Work</a>
+  <a href="#research">Research</a>
+  <a href="#liora">LIORA</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- Hero -->
+<div class="hero" id="home">
+  <p class="hero-label">Computer Engineering · AI Development</p>
+  <h1 class="hero-name">
+    <span class="ln">Alwin</span>
+    <span class="ln">Madhu.</span>
+  </h1>
+  <div class="hero-bot">
+    <p class="hero-sub">Building systems that think.<br>Designing things that feel.<br>Kerala, India.</p>
+    <a href="#about" class="hero-link">Explore</a>
+    <span class="hero-num">001 / 008</span>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span class="ti">Computer Engineering</span><span class="ti">—</span>
+    <span class="ti">AI Development</span><span class="ti">—</span>
+    <span class="ti">AWS Certified</span><span class="ti">—</span>
+    <span class="ti"><em>LIORA</em> · Health Tech</span><span class="ti">—</span>
+    <span class="ti">Open Source</span><span class="ti">—</span>
+    <span class="ti">Flutter · Android</span><span class="ti">—</span>
+    <span class="ti">Electronics · Fiber Optics</span><span class="ti">—</span>
+    <span class="ti">C / C++</span><span class="ti">—</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ti">Computer Engineering</span><span class="ti">—</span>
+    <span class="ti">AI Development</span><span class="ti">—</span>
+    <span class="ti">AWS Certified</span><span class="ti">—</span>
+    <span class="ti"><em>LIORA</em> · Health Tech</span><span class="ti">—</span>
+    <span class="ti">Open Source</span><span class="ti">—</span>
+    <span class="ti">Flutter · Android</span><span class="ti">—</span>
+    <span class="ti">Electronics · Fiber Optics</span><span class="ti">—</span>
+    <span class="ti">C / C++</span><span class="ti">—</span>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <div class="sh rv">
+    <span class="sl">002 / About</span>
+    <h2 class="st">Engineer.<br>Creator.<br>Thinker.</h2>
+  </div>
+  <div class="about-grid rv">
+    <div class="at">
+      <p>I'm <strong>Alwin Madhu</strong> — a Computer Engineer from Kerala, India. My foundation is in electronics: rectifiers, fiber optics, networking. This hardware instinct shapes how I build software — precise, efficient, real.</p>
+      <p>My project <strong>LIORA</strong> is a privacy-first menstrual health app, tested with 100+ users. No ads. No data servers. It simply works. That is the goal for everything I build.</p>
+      <p>I hold an <strong>AWS Certification</strong>. I'm self-studying <strong>CS50</strong> by Harvard. I use tools like Antigravity, Claude Code, and VS Code daily to push the edge of what I can build alone.</p>
+      <div class="rows">
+        <div class="row"><span class="rn">Flutter · Android Development</span><span class="rt">Mobile</span></div>
+        <div class="row"><span class="rn">C / C++ Systems Programming</span><span class="rt">Systems</span></div>
+        <div class="row"><span class="rn">PHP · HTML · CSS · JavaScript</span><span class="rt">Web</span></div>
+        <div class="row"><span class="rn">AI &amp; Machine Learning</span><span class="rt">Research</span></div>
+        <div class="row"><span class="rn">AWS Cloud Infrastructure</span><span class="rt">Certified</span></div>
+        <div class="row"><span class="rn">Electronics · Fiber Optics · Networking</span><span class="rt">Foundation</span></div>
+        <div class="row"><span class="rn">Antigravity · Claude Code · VS Code</span><span class="rt">AI Tools</span></div>
+      </div>
+    </div>
+    <div class="sg">
+      <div class="sc"><p class="sv">100+</p><p class="sk">Users Tested</p></div>
+      <div class="sc"><p class="sv">4+</p><p class="sk">Projects Built</p></div>
+      <div class="sc"><p class="sv">1</p><p class="sk">Published Paper</p></div>
+      <div class="sc"><p class="sv">AWS</p><p class="sk">Certified</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <div class="sh rv">
+    <span class="sl">003 / Education</span>
+    <h2 class="st">Academic<br>Foundation.</h2>
+  </div>
+  <div class="edu-grid rv">
+    <div class="ec">
+      <p class="ep">2024 — 2026</p>
+      <h3 class="ed">Diploma in Computer Engineering</h3>
+      <p class="es">Government Polytechnic College, Purappuzha<br>Kerala, India</p>
+      <p class="et">Built LIORA and SCREAM during study. Focused on software engineering, systems design, and real-world application development.</p>
+    </div>
+    <div class="ec">
+      <p class="ep">2022 — 2024</p>
+      <h3 class="ed">Higher Secondary — Electronic Science</h3>
+      <p class="es">St. Augustine's Higher Secondary School, Karimkunnam<br>Kerala, India</p>
+      <p class="et">Strong foundation in electronics: rectifiers, circuit design, fiber optics, and networking — the hardware layer behind every software decision I make.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="sh rv">
+    <span class="sl">004 / Experience</span>
+    <h2 class="st">Professional<br>Journey.</h2>
+  </div>
+  <div class="exp-list rv">
+    <div class="exp">
+      <span class="exp-per">May — Jul 2025</span>
+      <div>
+        <h3 class="exp-ttl">C/C++ Programming Intern</h3>
+        <p class="exp-org">Keltron Advanced Studies · Training Program</p>
+        <p class="exp-desc">Intensive systems-level training. Memory management, data structures, algorithmic thinking under professional guidance.</p>
+      </div>
+    </div>
+    <div class="exp">
+      <span class="exp-per">2024 — Present</span>
+      <div>
+        <h3 class="exp-ttl">Independent Developer &amp; Creator</h3>
+        <p class="exp-org">Open-Source · Healthcare Tech · AI</p>
+        <p class="exp-desc">Building LIORA, SCREAM, ROSCYCLE and more. Privacy-first apps, open source contributions, and AI/ML research — solo, at full scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications">
+  <div class="sh rv">
+    <span class="sl">005 / Certifications</span>
+    <h2 class="st">Learning &amp;<br>Growth.</h2>
+  </div>
+  <div class="cert-grid rv">
+    <div class="cc">
+      <p class="cs">Certified</p>
+      <h3 class="cn">AWS Cloud Practitioner</h3>
+      <p class="ci">Amazon Web Services<br>Cloud infrastructure &amp; data center operations</p>
+    </div>
+    <div class="cc">
+      <p class="cs">Ongoing · Self-study</p>
+      <h3 class="cn">CS50: Introduction to Computer Science</h3>
+      <p class="ci">Harvard University<br>Algorithms, data structures, web development, AI</p>
+    </div>
+    <div class="cc">
+      <p class="cs">Proficient</p>
+      <h3 class="cn">AI Development Tooling</h3>
+      <p class="ci">Antigravity by Google · Claude Code by Anthropic<br>VS Code · Modern AI-assisted workflows</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="sh rv">
+    <span class="sl">006 / Work</span>
+    <h2 class="st">Selected<br>Projects.</h2>
+  </div>
+  <div class="pg rv">
+    <div class="pc">
+      <div class="pct"><span class="pn">01</span><span class="ptag">Android · Health</span></div>
+      <h3 class="ptitle">LIORA</h3>
+      <p class="pdesc">Privacy-first menstrual cycle tracker. Zero ads. Zero servers. Tested with 100+ users. Your data stays yours.</p>
+      <div class="plinks">
+        <a href="https://github.com/alwin-m/liora" target="_blank" rel="noopener" class="pl">GitHub ↗</a>
+        <a href="downloads.html" class="pl dim">Download APK</a>
+      </div>
+      <div class="pimg"><img src="liora.jpg" alt="LIORA — health app" loading="lazy"></div>
+    </div>
+    <div class="pc">
+      <div class="pct"><span class="pn">02</span><span class="ptag">PHP · Social</span></div>
+      <h3 class="ptitle">SCREAM</h3>
+      <p class="pdesc">Text-only anonymous micro-blog. No photos, no profiles — just raw, unfiltered thought. Built with PHP &amp; HTML during college.</p>
+      <div class="plinks">
+        <a href="https://github.com/alwin-m/Scream-" target="_blank" rel="noopener" class="pl">GitHub ↗</a>
+      </div>
+      <div class="pimg"><img src="SCREAM.png" alt="SCREAM — micro-blogging" loading="lazy"></div>
+    </div>
+    <div class="pc">
+      <div class="pct"><span class="pn">03</span><span class="ptag">Web · Health</span></div>
+      <h3 class="ptitle">ROSCYCLE</h3>
+      <p class="pdesc">Open-source cycle tracking web app with PCOD detection. MIT licensed. Compassionate precision design.</p>
+      <div class="plinks">
+        <a href="https://github.com/alwin-m/ROS-Cycle-Project" target="_blank" rel="noopener" class="pl">GitHub ↗</a>
+        <a href="https://alwin-m.github.io/ROS-Cycle-Project/" target="_blank" rel="noopener" class="pl dim">Live Demo</a>
+      </div>
+      <div class="pimg"><img src="ROSCYCLE.png" alt="ROSCYCLE — cycle tracker" loading="lazy"></div>
+    </div>
+    <div class="pc no-img">
+      <div class="pct"><span class="pn">04</span><span class="ptag">More →</span></div>
+      <h3 class="ptitle">See everything.</h3>
+      <p class="pdesc">BlueMind, MegaMind, and all other projects — each built with intention.</p>
+      <div class="plinks">
+        <a href="projects.html" class="pl">View All Projects ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research -->
+<section id="research">
+  <div class="sh rv">
+    <span class="sl">007 / Research</span>
+    <h2 class="st">Published<br>Work.</h2>
+  </div>
+  <div class="rl rv">
+    <div class="ri">
+      <span class="ridx">01</span>
+      <div>
+        <h3 class="rttl">Digitizing Touch with an Artificial Multimodal Fingertip</h3>
+        <div class="rmeta">
+          <span class="rtype">Robotics · Haptics · AI</span>
+          <span class="rdesc">Digit 360 — 7 μm spatial resolution, millinewton force detection. New frontiers in prosthetics &amp; VR.</span>
+        </div>
+      </div>
+      <div class="ract"><a href="DigitizingTouch.pdf" download class="rlink">PDF ↓</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIORA dark -->
+<section id="liora">
+  <div class="sh rv">
+    <span class="sl">LIORA · v1.0.0</span>
+    <h2 class="st">The most<br>private period<br>tracker.</h2>
+  </div>
+  <div class="lb rv">
+    <div>
+      <p class="ldesc">Privacy-first. Open-source. Zero advertisements. Tested with 100+ users. Your cycle data lives only on your device — never on a server. Completely free, forever.</p>
+      <a href="downloads.html" class="lcta">Download APK →</a>
+    </div>
+    <div class="ls">
+      <div class="lst"><p class="lsv">v1.0.0</p><p class="lsk">Current Release</p></div>
+      <div class="lst"><p class="lsv">Android</p><p class="lsk">Platform</p></div>
+      <div class="lst"><p class="lsv">100+</p><p class="lsk">Users Tested</p></div>
+      <div class="lst"><p class="lsv">Free</p><p class="lsk">Always</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="contact-inner">
+    <h2 class="cttl rv">Let's<br>talk.</h2>
+    <div class="clinks rv">
+      <a href="mailto:Alwinmadhu7@gmail.com" class="clink">Email →</a>
+      <a href="https://github.com/alwin-m" target="_blank" rel="noopener" class="clink">GitHub →</a>
+      <a href="https://www.linkedin.com/in/alwinmadhu7/" target="_blank" rel="noopener" class="clink">LinkedIn →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="fc">© 2026 Alwin Madhu</p>
+  <div class="fl">
+    <a href="projects.html">Projects</a>
+    <a href="research.html">Research</a>
+    <a href="downloads.html">LIORA</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+
+  /* cursor */
+  const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  const cur = document.getElementById('cur');
+  const ring = document.getElementById('ring');
+  if (isTouch) { cur.style.display='none'; ring.style.display='none'; }
+  else {
+    let mx=-100,my=-100,rx=-100,ry=-100;
+    document.addEventListener('mousemove', e => {
+      mx=e.clientX; my=e.clientY;
+      cur.style.left=mx+'px'; cur.style.top=my+'px';
+    });
+    (function loop(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a,button').forEach(el => {
+      el.addEventListener('mouseenter',()=>document.body.classList.add('on-link'));
+      el.addEventListener('mouseleave',()=>document.body.classList.remove('on-link'));
+    });
+  }
+
+  /* nav bg on scroll */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('bg', scrollY > 60);
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* hamburger */
+  const ham = document.getElementById('ham');
+  const mnav = document.getElementById('mnav');
+  let open = false;
+  ham.addEventListener('click', () => {
+    open = !open;
+    mnav.style.display = open ? 'flex' : 'none';
+    requestAnimationFrame(() => mnav.classList.toggle('on', open));
+    ham.setAttribute('aria-expanded', open);
+    mnav.setAttribute('aria-hidden', !open);
+    ham.querySelectorAll('span').forEach((s,i) => {
+      s.style.transform = open ? (i===0?'translateY(6px) rotate(45deg)':'translateY(-6px) rotate(-45deg)') : '';
+    });
+  });
+  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    open=false; mnav.classList.remove('on');
+    setTimeout(()=>mnav.style.display='none',400);
+    ham.setAttribute('aria-expanded','false'); mnav.setAttribute('aria-hidden','true');
+    ham.querySelectorAll('span').forEach(s=>s.style.transform='');
+  }));
+
+  /* scroll reveal */
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold:.07, rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  /* smooth anchor */
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (!t) return; e.preventDefault(); t.scrollIntoView({behavior:'smooth'});
+  }));
+
+  /* hero label fade */
+  const hl = document.querySelector('.hero-label');
+  if (hl){ hl.style.opacity='0'; hl.style.transition='opacity 1s .25s ease'; requestAnimationFrame(()=>hl.style.opacity='1'); }
+})();
+</script>
+</body>
+</html>

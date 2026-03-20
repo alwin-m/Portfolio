@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://drive.usercontent.google.com; frame-ancestors 'self';">
+  <meta name="description" content="Download LIORA — a free, privacy-first menstrual cycle tracker by Alwin Madhu.">
+  <meta name="keywords" content="LIORA, period tracker, menstrual cycle app, Android, APK download, free health app">
+  <meta name="author" content="Alwin Madhu">
+  <link rel="canonical" href="https://alwin-m.github.io/Portfolio/downloads.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <title>LIORA — Download</title>
+  <style>
+    :root{--w:#ffffff;--ow:#f7f7f5;--blk:#090909;--g1:#f0f0ee;--g2:#e2e2df;--g4:#9e9e98;--g6:#696963;--g8:#2a2a26;--f:'Inter',system-ui,sans-serif;--m:'DM Mono',monospace;--e:cubic-bezier(0.16,1,0.3,1);}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{font-family:var(--f);background:var(--w);color:var(--blk);line-height:1;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    img{display:block;max-width:100%;}
+    a,button{-webkit-tap-highlight-color:transparent;}
+    @media(hover:hover)and(pointer:fine){body,a,button{cursor:none;}}
+    #cur{position:fixed;width:8px;height:8px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .18s var(--e),height .18s var(--e);}
+    #ring{position:fixed;width:30px;height:30px;border:1px solid rgba(255,255,255,.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .35s var(--e),height .35s var(--e);}
+    body.on-link #cur{width:12px;height:12px;}
+    body.on-link #ring{width:48px;height:48px;}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;transition:background .3s;}
+    nav.bg{background:rgba(255,255,255,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+    .logo{font-size:12px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--blk);text-decoration:none;}
+    .nl{display:flex;gap:40px;list-style:none;}
+    .nl a{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--g6);text-decoration:none;transition:color .25s;}
+    .nl a:hover{color:var(--blk);}
+    .ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;}
+    .ham span{display:block;width:20px;height:1px;background:var(--blk);transition:transform .3s var(--e);}
+    .mnav{display:none;position:fixed;inset:0;background:var(--w);z-index:99;flex-direction:column;justify-content:center;align-items:center;gap:36px;opacity:0;transition:opacity .4s var(--e);}
+    .mnav.on{opacity:1;}
+    .mnav a{font-size:clamp(26px,5.5vw,48px);font-weight:100;letter-spacing:-.03em;color:var(--blk);text-decoration:none;}
+
+    /* Full-bleed dark hero */
+    .hero{min-height:100vh;background:var(--blk);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 72px;}
+    .hero-bg{position:absolute;inset:0;opacity:.18;}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
+    .hero-inner{position:relative;z-index:1;}
+    .hero-label{font-family:var(--m);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
+    .hero-label::before{content:'';width:32px;height:1px;background:rgba(255,255,255,.25);}
+    .hero-name{font-size:clamp(72px,14vw,200px);font-weight:100;letter-spacing:-.06em;line-height:.83;color:#fff;margin-bottom:0;}
+    .hero-sub{display:flex;justify-content:space-between;align-items:flex-end;margin-top:52px;gap:32px;}
+    .hero-desc{font-size:clamp(12px,1.3vw,15px);font-weight:300;line-height:1.8;color:rgba(255,255,255,.4);max-width:340px;}
+    .dl-btn{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:300;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:16px 32px;white-space:nowrap;transition:background .3s,border-color .3s,gap .3s var(--e);}
+    .dl-btn:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4);gap:18px;}
+    .dl-wrap{display:flex;flex-direction:column;gap:16px;}
+    .dl-mirror{font-size:10px;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color .3s;}
+    .dl-mirror:hover{color:#fff;}
+
+    /* Specs bar */
+    .specs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2);}
+    .sp{background:var(--w);padding:44px 36px;}
+    .spv{font-size:36px;font-weight:100;letter-spacing:-.04em;color:var(--blk);line-height:1;margin-bottom:8px;}
+    .spk{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);}
+
+    /* Install steps */
+    .install{padding:120px 60px;background:var(--ow);}
+    .ih{margin-bottom:72px;}
+    .il{font-family:var(--m);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--g4);margin-bottom:28px;}
+    .it{font-size:clamp(36px,5.5vw,72px);font-weight:100;letter-spacing:-.04em;line-height:.92;}
+    .steps{border-top:1px solid var(--g2);}
+    .step{display:grid;grid-template-columns:52px 1fr;gap:40px;padding:44px 0;border-bottom:1px solid var(--g2);}
+    .sn{font-family:var(--m);font-size:10px;color:var(--g4);letter-spacing:.1em;padding-top:4px;}
+    .st{font-size:16px;font-weight:300;color:var(--blk);margin-bottom:6px;}
+    .sd{font-size:13px;font-weight:300;color:var(--g6);line-height:1.65;}
+
+    /* Privacy */
+    .priv{padding:120px 60px;background:var(--w);}
+    .priv-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;}
+    .ph2{font-size:clamp(36px,5.5vw,72px);font-weight:100;letter-spacing:-.04em;line-height:.92;margin-bottom:44px;}
+    .pt{font-size:clamp(13px,1.3vw,15px);font-weight:300;line-height:1.8;color:var(--g8);margin-bottom:20px;}
+    .plist{border-top:1px solid var(--g2);}
+    .prow{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--g2);}
+    .pit{font-size:13px;font-weight:300;color:var(--blk);}
+    .pst{font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase;}
+    .pst.yes{color:var(--g8);}
+    .pst.no{color:var(--g4);}
+
+    /* Checksum */
+    .hash{padding:72px 60px;background:var(--ow);border-top:1px solid var(--g2);}
+    .hl{font-family:var(--m);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--g4);margin-bottom:20px;}
+    .hv{font-family:var(--m);font-size:clamp(10px,1vw,13px);color:var(--g8);word-break:break-all;line-height:1.6;}
+    .hn{margin-top:14px;font-size:12px;font-weight:300;color:var(--g4);line-height:1.6;max-width:600px;}
+    code{font-family:var(--m);font-size:11px;background:var(--g1);padding:2px 6px;}
+
+    footer{border-top:1px solid var(--g2);padding:36px 60px;display:flex;justify-content:space-between;align-items:center;}
+    .fc{font-family:var(--m);font-size:10px;color:var(--g4);letter-spacing:.08em;}
+    .fls{display:flex;gap:28px;}
+    .fls a{font-size:10px;color:var(--g4);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .25s;}
+    .fls a:hover{color:var(--blk);}
+
+    .rv{opacity:0;transform:translateY(36px);transition:opacity .9s var(--e),transform .9s var(--e);}
+    .rv.in{opacity:1;transform:none;}
+
+    @media(max-width:960px){
+      nav{padding:24px 32px;} .nl{display:none;} .ham{display:flex;}
+      .hero{padding:0 32px 56px;}
+      .hero-sub{flex-direction:column;align-items:flex-start;}
+      .specs{grid-template-columns:1fr 1fr;}
+      .install,.priv{padding:80px 32px;}
+      .priv-inner{grid-template-columns:1fr;gap:60px;}
+      .hash{padding:60px 32px;}
+      footer{flex-direction:column;gap:20px;text-align:center;}
+    }
+    @media(max-width:640px){
+      nav{padding:20px;}
+      .hero{padding:0 20px 44px;}
+      .sp{padding:30px 20px;}
+      .install,.priv{padding:60px 20px;}
+      .step{grid-template-columns:1fr;gap:8px;}
+      .sn{display:none;}
+      .hash{padding:48px 20px;}
+      footer{padding:28px 20px;}
+      .fls{flex-wrap:wrap;justify-content:center;gap:14px;}
+    }
+  </style>
+</head>
+<body>
+<div id="cur"></div>
+<div id="ring"></div>
+
+<nav id="nav">
+  <a href="index.html" class="logo">Alwin Madhu</a>
+  <ul class="nl">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="projects.html">Work</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="downloads.html">LIORA</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+<div class="mnav" id="mnav">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Work</a>
+  <a href="research.html">Research</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<!-- Dark hero with ROSCYCLE bg image -->
+<div class="hero">
+  <div class="hero-bg" aria-hidden="true"><img src="liora.jpg" alt="" loading="eager"></div>
+  <div class="hero-inner">
+    <p class="hero-label">LIORA · v1.0.0 · Android</p>
+    <h1 class="hero-name">LIORA.</h1>
+    <div class="hero-sub">
+      <p class="hero-desc">The most private period tracker. Zero ads. Zero data servers. Your cycle stays yours — always. Local-first, open-source, completely free.</p>
+      <div class="dl-wrap">
+        <a href="Liora.apk" download="Liora.apk" class="dl-btn">Download APK ↓</a>
+        <a href="https://drive.google.com/p/1CbY42WabjajrcLhbL8j_kaRRH79P8R6o" target="_blank" rel="noopener" class="dl-mirror">Google Drive Mirror ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Specs -->
+<div class="specs rv">
+  <div class="sp"><p class="spv">v1.0.0</p><p class="spk">Version</p></div>
+  <div class="sp"><p class="spv">53 MB</p><p class="spk">APK Size</p></div>
+  <div class="sp"><p class="spv">Android</p><p class="spk">Platform</p></div>
+  <div class="sp"><p class="spv">Free</p><p class="spk">Forever</p></div>
+</div>
+
+<!-- Install guide -->
+<div class="install">
+  <div class="ih rv">
+    <p class="il">How to Install</p>
+    <h2 class="it">Six steps.<br>Two minutes.</h2>
+  </div>
+  <div class="steps rv">
+    <div class="step"><span class="sn">01</span><div><p class="st">Download LIORA.apk</p><p class="sd">Tap the Download APK button above. The download starts immediately — the file saves directly to your Downloads folder.</p></div></div>
+    <div class="step"><span class="sn">02</span><div><p class="st">Open File Manager</p><p class="sd">Navigate to your Downloads folder using your device's default file manager.</p></div></div>
+    <div class="step"><span class="sn">03</span><div><p class="st">Tap the APK file</p><p class="sd">Tap LIORA.apk to begin installation. You may be prompted to allow unknown sources.</p></div></div>
+    <div class="step"><span class="sn">04</span><div><p class="st">Allow installation</p><p class="sd">Go to Settings → Security → allow your browser or file manager to install apps.</p></div></div>
+    <div class="step"><span class="sn">05</span><div><p class="st">Wait for completion</p><p class="sd">Installation takes under 30 seconds. No account creation required.</p></div></div>
+    <div class="step"><span class="sn">06</span><div><p class="st">Open and begin</p><p class="sd">Launch LIORA from your app drawer. No setup. No onboarding wall. Just start tracking.</p></div></div>
+  </div>
+</div>
+
+<!-- Privacy -->
+<div class="priv">
+  <div class="priv-inner rv">
+    <div>
+      <h2 class="ph2">Your data.<br>Your device.<br>Full stop.</h2>
+      <p class="pt">LIORA was designed with one principle: your health data is yours. Cycle data is stored only on your device and never transmitted to any server.</p>
+      <p class="pt">We collect the bare minimum. We will never sell, share, or monetize your personal information.</p>
+    </div>
+    <div class="plist">
+      <div class="prow"><span class="pit">Data stored on-device</span><span class="pst yes">✓ Local only</span></div>
+      <div class="prow"><span class="pit">Third-party advertising</span><span class="pst no">✗ None</span></div>
+      <div class="prow"><span class="pit">Analytics &amp; tracking</span><span class="pst no">✗ None</span></div>
+      <div class="prow"><span class="pit">Data sold to third parties</span><span class="pst no">✗ Never</span></div>
+      <div class="prow"><span class="pit">Works fully offline</span><span class="pst yes">✓ Yes</span></div>
+      <div class="prow"><span class="pit">Open source codebase</span><span class="pst yes">✓ Verified</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Checksum -->
+<div class="hash rv">
+  <p class="hl">SHA-256 File Integrity</p>
+  <p class="hv">7796FB3F052C19B8B49684C930E07ECA9494F2A4480824A45D0E572BC3EEFC15</p>
+  <p class="hn">Verify with <code>sha256sum Liora.apk</code> (Mac/Linux) or <code>Get-FileHash Liora.apk -Algorithm SHA256</code> (Windows). If the hash does not match, delete and re-download.</p>
+</div>
+
+<footer>
+  <p class="fc">© 2026 Alwin Madhu</p>
+  <div class="fls">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Work</a>
+    <a href="research.html">Research</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+  const isTouch='ontouchstart'in window||navigator.maxTouchPoints>0;
+  const cur=document.getElementById('cur'),ring=document.getElementById('ring');
+  if(isTouch){cur.style.display='none';ring.style.display='none';}
+  else{
+    let mx=-100,my=-100,rx=-100,ry=-100;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+    (function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>document.body.classList.add('on-link'));
+      el.addEventListener('mouseleave',()=>document.body.classList.remove('on-link'));
+    });
+  }
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('bg',scrollY>60),{passive:true});
+  const ham=document.getElementById('ham'),mnav=document.getElementById('mnav');
+  let open=false;
+  ham.addEventListener('click',()=>{
+    open=!open;mnav.style.display=open?'flex':'none';
+    requestAnimationFrame(()=>mnav.classList.toggle('on',open));
+    ham.querySelectorAll('span').forEach((s,i)=>{s.style.transform=open?(i===0?'translateY(6px) rotate(45deg)':'translateY(-6px) rotate(-45deg)'):''});
+  });
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    open=false;mnav.classList.remove('on');setTimeout(()=>mnav.style.display='none',400);
+    ham.querySelectorAll('span').forEach(s=>s.style.transform='');
+  }));
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.07,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
