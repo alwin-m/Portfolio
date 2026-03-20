@@ -1,0 +1,40 @@
+# SEO Robots Configuration for LIORA Portfolio Website
+# GitHub Pages: https://alwin-m.github.io/Portfolio/
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /downloads.html
+Allow: /projects.html
+Allow: /research.html
+Allow: /Liora.apk
+Allow: /DigitizingTouch.pdf
+Allow: /sitemap.xml
+
+# Block crawling of unnecessary directories
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
+Disallow: /node_modules/
+
+# Sitemaps
+Sitemap: https://alwin-m.github.io/Portfolio/sitemap.xml
+
+# Crawl delay (requests per second)
+Crawl-delay: 0
+
+# Allow search engine prerender and social media bots
+User-agent: googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
