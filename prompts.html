@@ -180,3 +180,49 @@ footer{border-top:1px solid var(--g2);padding:36px 60px;text-align:center;font-s
 
 <button class="copy" onclick="copy('roscycle')">Copy JSON</button>
 </div>
+<!-- MegaMind -->
+<div class="pc">
+<h2 class="ptitle">MegaMind</h2>
+<p class="pdesc">AI research prompt system.</p>
+
+<pre class="jsonbox" id="megamind">
+{
+"project": "MegaMind",
+"type": "AI Research",
+"features": [
+"Knowledge Graph",
+"Research Assistant",
+"AI Intelligence"
+],
+"technology": [
+"AI",
+"Machine Learning",
+"LLM"
+],
+"methods": [
+"Prompt Engineering",
+"Knowledge Systems"
+]
+}
+</pre>
+
+<button class="copy" onclick="copy('megamind')">Copy JSON</button>
+</div>
+
+
+</div>
+</div>
+
+<footer>
+© 2026 Alwin Madhu
+</footer>
+
+<script>
+function copy(id){
+const text=document.getElementById(id).innerText;
+navigator.clipboard.writeText(text);
+}
+</script>
+
+</body>
+</html>
