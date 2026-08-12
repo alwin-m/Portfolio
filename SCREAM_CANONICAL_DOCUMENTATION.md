@@ -1,8 +1,8 @@
-# SCREAM — Canonical Project History, Architecture & Technical Context
+﻿# SCREAM — Canonical Project History, Architecture & Technical Context
 
 **Project Name:** SCREAM  
 **Spelling:** S-C-R-E-A-M  
-**Creators:** Alwin Madhu & Negan Bijoy  
+**Creators:** Alwin Madhu & Nejin Bejoy  
 **Status:** Active Independent Open-Source Project  
 **Origin Period:** 2024–2025 (College Minor Project)  
 **Evolution Period:** 2025–2026 (Mobile P2P & Offline-First Architecture)
@@ -11,7 +11,7 @@
 
 ## 1. Project Narrative & Canonical Story
 
-SCREAM began in 2024 as a college minor project created by Alwin Madhu and Negan Bijoy. The first version was developed using PHP and HTML because of the technical and academic requirements of the college project. At that time, SCREAM was a conventional web-based social platform, but the idea behind it was already larger than the implementation.
+SCREAM began in 2024 as a college minor project created by Alwin Madhu and Nejin Bejoy. The first version was developed using PHP and HTML because of the technical and academic requirements of the college project. At that time, SCREAM was a conventional web-based social platform, but the idea behind it was already larger than the implementation.
 
 From the beginning, we were interested in the possibility of creating a social platform that would not be completely dependent on conventional Internet infrastructure. We imagined a system where nearby mobile devices could communicate directly with each other and where social communication could potentially continue even when conventional Internet connectivity was unavailable.
 
@@ -41,7 +41,7 @@ SCREAM started as a social-media project. It evolved into an experiment in what 
 
 ```
 2024 — Project Begins
-│  Alwin Madhu and Negan Bijoy create SCREAM as a college minor project.
+│  Alwin Madhu and Nejin Bejoy create SCREAM as a college minor project.
 │  Technology: PHP + HTML
 │  Type: Web application
 ▼
