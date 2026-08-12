@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCREAM — Peer-to-Peer Social Platform | Alwin Madhu</title>
+    
+    <meta name="description" content="SCREAM is an open-source, offline-first social networking project exploring decentralized, Internet-independent social networking.">
+    <meta name="keywords" content="SCREAM, SCREAM social network, offline-first social network, Alwin Madhu, Jeen Madhu, Negan Bijoy, peer-to-peer communication, decentralized social media, mesh networking, Internet-independent communication, resilient communication, Android P2P APK">
+    <meta name="author" content="Alwin Madhu">
+    
+    <!-- STRUCTURED DATA: FAQ Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Alwin Madhu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alwin Madhu (also known as Jeen / j_e_e_n._) is a Computer Engineer and AI Developer from Kerala, India. He is the co-creator of SCREAM, creator of LIORA, and owner of the © j_e_e_n._ copyright watermark."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is SCREAM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SCREAM is an experimental mobile, offline-first, peer-to-peer social networking platform. It explores communication resilience by enabling nearby mobile devices to communicate directly with one another without relying entirely on conventional Internet connectivity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How did SCREAM begin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SCREAM began in 2024 as a college minor project created by Alwin Madhu and Negan Bijoy. It originally started as a PHP and HTML server-based web application because of academic requirements, but the underlying concept always involved exploring Internet-independent communication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When did SCREAM become a mobile application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In May 2026, Alwin Madhu personally began transforming the original SCREAM web project into a mobile application (APK) to implement offline operation and peer-to-peer networking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the relationship between SCREAM and the 2026 New Delhi student protests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The New Delhi protests did not inspire SCREAM, nor did they cause the APK conversion, which was already underway. The events simply became a real-world context for examining the communication-resilience problem that SCREAM had already been exploring. SCREAM is not designed for one particular political situation; it is a technological exploration of resilient communication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SCREAM require the Internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SCREAM can use conventional Internet infrastructure when it is available, but when it is unavailable, local peer-to-peer communication and offline storage allow nearby devices to continue exchanging information without a central server."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- STRUCTURED DATA: Project / SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SCREAM",
+      "applicationCategory": "SocialNetworkingApplication",
+      "operatingSystem": "Android",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Alwin Madhu"
+        },
+        {
+          "@type": "Person",
+          "name": "Negan Bijoy"
+        }
+      ],
+      "dateCreated": "2024",
+      "description": "SCREAM began in 2024 as a college minor project created by Alwin Madhu and Negan Bijoy. The first version was developed using PHP and HTML because of the technical and academic requirements of the college project. At that time, SCREAM was a conventional web-based social platform, but the idea behind it was already larger than the implementation. From the beginning, we were interested in the possibility of creating a social platform that would not be completely dependent on conventional Internet infrastructure. We imagined a system where nearby mobile devices could communicate directly with each other and where social communication could potentially continue even when conventional Internet connectivity was unavailable. At the time, limitations in our technical knowledge and the requirements of the college project meant that we could not fully implement that idea. The PHP/HTML application therefore became the first stage of SCREAM. As our technical knowledge developed during 2025 and early 2026, we began reconsidering the architecture. In May 2026, during my birthday month, I personally began transforming the original SCREAM project into a mobile APK/application. This was more than simply converting a website into a mobile package. The objective was to explore a new architecture based around mobile devices, local communication, offline operation, and peer-to-peer networking. The first mobile implementation was built and experimentally tested before the 2026 New Delhi student protests became part of our real-world observations. Later, we monitored the student protests in New Delhi and the communication conditions surrounding them. These events did not inspire SCREAM, did not create its offline/P2P concept, and did not cause us to convert the project into a mobile application. The mobile transition was already underway. Instead, the New Delhi events became another real-world situation through which we could examine the communication-resilience problem that SCREAM had already been exploring. We also continued observing situations around the world where conventional communication infrastructure can become unreliable or unavailable, including conflict-affected regions, disasters, infrastructure failures, and other large-scale emergencies. These observations were not about taking a political position. They helped us understand the practical environments in which resilient communication technologies could potentially become useful. Through this process, SCREAM evolved from a college PHP/HTML web project into an experimental mobile, offline-first, peer-to-peer social networking platform. The project's central question became much broader than the original academic assignment: How can people continue to communicate, share information, and maintain a social network when conventional Internet connectivity is unavailable or unreliable? SCREAM is not designed for one particular protest, country, conflict, or political situation. It is an exploration of a technological possibility: creating a social networking experience that can use conventional Internet infrastructure when it is available while also exploring local peer-to-peer communication when it is not. The long-term vision is to make communication more resilient without making the technology more complicated for the user. The goal is to combine the familiarity of a modern social network with the possibilities of mobile peer-to-peer and offline-first communication. What began in 2024 as a college minor project has therefore become an ongoing exploration of mobile computing, distributed systems, peer-to-peer networking, offline-first architecture, data synchronization, and resilient communication. SCREAM started as a social-media project. It evolved into an experiment in what social communication could look like when the Internet is no longer the only path between people."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --w: #ffffff;
+            --ow: #f7f7f5;
+            --blk: #090909;
+            --g1: #f0f0ee;
+            --g2: #e2e2df;
+            --g4: #9e9e98;
+            --g6: #696963;
+            --g8: #2a2a26;
+            --f: 'Inter', system-ui, sans-serif;
+            --m: 'DM Mono', monospace;
+            --e: cubic-bezier(0.16, 1, 0.3, 1);
+            --accent: #1a1a1a;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--f);
+            background: var(--w);
+            color: var(--blk);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 60px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--blk);
+            text-decoration: none;
+        }
+
+        .back-link {
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--g6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .back-link:hover {
+            color: var(--blk);
+        }
+
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 160px 24px 100px;
+        }
+
+        .hero {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 200;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--g6);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 400;
+            margin: 64px 0 24px;
+            letter-spacing: -0.02em;
+            color: var(--blk);
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: var(--g2);
+            margin-top: 24px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--g8);
+            margin-bottom: 24px;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+        
+        strong {
+            font-weight: 500;
+            color: var(--blk);
+        }
+
+        .flow-diagram {
+            font-family: var(--m);
+            font-size: 13px;
+            background: var(--ow);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 32px 0;
+            color: var(--blk);
+            text-align: center;
+            border: 1px solid var(--g2);
+            word-break: break-word;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+        }
+
+        .arrow-down {
+            text-align: center;
+            color: var(--g4);
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+        }
+        
+        li {
+            font-size: 15px;
+            color: var(--g8);
+            margin-bottom: 12px;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+        
+        .timeline-entry {
+            margin-bottom: 32px;
+            padding-left: 24px;
+            border-left: 1px solid var(--g2);
+            position: relative;
+        }
+        
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 6px;
+            width: 7px;
+            height: 7px;
+            background: var(--blk);
+            border-radius: 50%;
+        }
+        
+        .timeline-entry h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .footer-simple {
+            text-align: center;
+            padding: 60px 24px;
+            border-top: 1px solid var(--g1);
+            margin-top: 80px;
+        }
+        
+        .footer-simple p {
+            font-size: 11px;
+            color: var(--g6);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            nav { padding: 24px; }
+            main { padding-top: 120px; }
+            .title { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Alwin Madhu</a>
+        <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <h1 class="title">SCREAM</h1>
+            <p class="subtitle">From a College Web Project to an Offline Peer-to-Peer Social Platform</p>
+        </div>
+
+        <h2>1. The Beginning of SCREAM</h2>
+        <p>SCREAM began in 2024 as a college minor project created by Alwin Madhu and Negan Bijoy.</p>
+        <p>At that time, our college required us to develop the project as a web application using technologies such as PHP and HTML. Because of those academic requirements, the first version of SCREAM was built as a conventional server-based web application.</p>
+        <p>The original objective was to create a social-media-style platform where users could create, share, and interact with information.</p>
+        <p>However, the idea behind SCREAM was always broader than the first implementation.</p>
+        <p>From the beginning, we were interested in a fundamental question:</p>
+        <p><strong>What if a social platform could continue to function even when conventional Internet connectivity was unavailable?</strong></p>
+        <p>At that stage, we did not have enough technical knowledge, experience, or freedom within the college project to fully implement that concept. We were expected to remain within the PHP/web-development requirements, and our understanding of mobile development, peer-to-peer networking, and distributed systems was still developing.</p>
+        <p>So the first SCREAM remained a web application.</p>
+        <p>But the idea did not end there.</p>
+
+        <h2>2. The Original Vision</h2>
+        <p>A conventional social-media platform generally depends on a communication path such as:</p>
+        
+        <div class="flow-diagram">User → Internet → Central Server → Internet → User</div>
+        
+        <p>This architecture is extremely effective when Internet infrastructure is available.</p>
+        <p>However, it also creates a dependency on that infrastructure.</p>
+        <p>If Internet connectivity becomes unavailable, unreliable, or inaccessible, users may lose access to the platform even when nearby devices are physically capable of communicating with each other.</p>
+        <p>That led us to consider another possibility:</p>
+        
+        <div class="flow-diagram">User → Mobile Device → Nearby Device → Other Users</div>
+        
+        <p>Instead of treating the Internet as the only communication layer, we wanted to explore whether mobile devices themselves could participate in the communication network.</p>
+        <p>This was not a concept that appeared suddenly in 2026.</p>
+        <p>The underlying idea had already existed within SCREAM from its early development in 2024.</p>
+
+        <h2>3. The Limitations of the Original College Project</h2>
+        <p>The first SCREAM implementation was shaped by the environment in which it was created.</p>
+        <p>We had to work with the technologies expected by our college, and the project had to satisfy the requirements of a minor academic project.</p>
+        <p>At the same time, we were still learning.</p>
+        <p>We did not yet have the technical experience required to immediately implement a sophisticated mobile peer-to-peer system.</p>
+        <p>Therefore, the PHP/HTML version was an important first step.</p>
+        <p>It allowed us to establish the fundamental concept of SCREAM as a social platform while giving us a foundation that could later be re-engineered.</p>
+        <p>The original web application was not the final destination.</p>
+        <p>It was the starting point.</p>
+
+        <h2>4. Reconsidering SCREAM</h2>
+        <p>During 2025 and early 2026, our technical knowledge and interests developed further.</p>
+        <p>We began looking at the original project differently.</p>
+        <p>Instead of asking only:</p>
+        <p><em>How can we improve the SCREAM website?</em></p>
+        <p>we began asking:</p>
+        <p><strong>Can we transform SCREAM into something that does not fundamentally depend on a conventional Internet connection?</strong></p>
+        <p>That question led us toward:</p>
+        <ul>
+            <li>Mobile application development</li>
+            <li>Peer-to-peer networking</li>
+            <li>Local device communication</li>
+            <li>Offline-first architecture</li>
+            <li>Local data storage</li>
+            <li>Device discovery</li>
+            <li>Data synchronization</li>
+            <li>Distributed communication</li>
+        </ul>
+        <p>This represented a significant architectural change.</p>
+        <p>We were no longer simply improving a PHP application.</p>
+        <p>We were rethinking what SCREAM could actually be.</p>
+
+        <h2>5. May 2026 — The Mobile APK Transition</h2>
+        <p>One of the most important milestones in SCREAM's history happened in May 2026.</p>
+        <p>During my birthday month, I personally began transforming the original SCREAM project from its PHP/HTML web implementation into a mobile application/APK.</p>
+        <p>This was not simply a matter of putting the existing website into an APK.</p>
+        <p>The intention was to create a genuine mobile implementation and begin experimenting with a different communication architecture.</p>
+        <p>The new direction focused on:</p>
+        <ul>
+            <li>Mobile devices as communication endpoints</li>
+            <li>Local communication between devices</li>
+            <li>Peer-to-peer networking</li>
+            <li>Offline operation</li>
+            <li>Local data exchange</li>
+            <li>Social networking without assuming continuous Internet connectivity</li>
+        </ul>
+        <p>The first mobile implementation was built and experimentally tested.</p>
+        <p>This is an important part of the project's chronology because it establishes that the mobile/P2P direction was already being developed before the 2026 New Delhi student protests became part of our real-world observations.</p>
+        <p>In other words:</p>
+        <p><strong>The New Delhi protests did not cause SCREAM to become a mobile application. The mobile transition was already happening.</strong></p>
+
+        <h2>6. The 2026 New Delhi Student Protests</h2>
+        <p>Later in 2026, we monitored the student protests taking place in New Delhi and the communication conditions surrounding those events.</p>
+        <p>We were particularly interested in the broader technological question of what happens to communication when conventional connectivity becomes unreliable, restricted, or unavailable during large-scale situations.</p>
+        <p>This observation was important to us, but its role needs to be described accurately.</p>
+        <ul>
+            <li>The protests did not inspire SCREAM.</li>
+            <li>The protests did not create the offline/P2P concept.</li>
+            <li>The protests did not cause the APK conversion.</li>
+        </ul>
+        <p>Those developments had already happened.</p>
+        <p>Instead, the New Delhi events became another real-world situation through which we could examine a problem that SCREAM had already been exploring.</p>
+        <p>The question was not political.</p>
+        <p>It was technical:</p>
+        <p><strong>What happens to ordinary digital communication when conventional Internet connectivity is no longer available?</strong></p>
+        <p>That question made the practical value of resilient communication systems more visible.</p>
+
+        <h2>7. Why Real-World Situations Matter to SCREAM</h2>
+        <p>SCREAM is not designed around a single protest, conflict, country, or political situation.</p>
+        <p>While developing the project, we began observing different situations around the world where conventional communication infrastructure could become unreliable.</p>
+        <p>These include situations involving:</p>
+        <ul>
+            <li>Internet infrastructure failures</li>
+            <li>Telecommunications disruptions</li>
+            <li>Natural disasters</li>
+            <li>Power failures</li>
+            <li>Large-scale emergencies</li>
+            <li>Physical isolation</li>
+            <li>Conflict-affected areas</li>
+            <li>Unreliable or intermittent connectivity</li>
+        </ul>
+        <p>We also monitored developments associated with different global conflicts and crisis situations, including the Russia–Ukraine war and developments involving Iran and the United States, among other situations.</p>
+        <p>The purpose of monitoring these events was not to take a political position.</p>
+        <p>We were interested in the communication and infrastructure problems that can occur in such environments.</p>
+        <p>Different situations allow us to ask the same technical question from different perspectives:</p>
+        <p><strong>If conventional communication infrastructure becomes unavailable, what alternatives could exist?</strong></p>
+        <p>That is directly relevant to the research and development of SCREAM.</p>
+
+        <h2>8. SCREAM Is About Communication Resilience</h2>
+        <p>As the project developed, the original idea became more clearly defined.</p>
+        <p>SCREAM is exploring communication resilience.</p>
+        <p>The goal is to investigate whether a social platform can remain useful when conventional Internet connectivity is unavailable or unreliable.</p>
+        <p>Instead of assuming:</p>
+        <div class="flow-diagram">Internet + Central Server = Social Network</div>
+        <p>SCREAM explores the possibility of:</p>
+        <div class="flow-diagram">Mobile Devices + Local Networking + Peer-to-Peer Communication = Social Network</div>
+        <p>The Internet does not necessarily have to disappear from the architecture entirely.</p>
+        <p>Instead, the idea is to provide additional communication paths.</p>
+        <p>When Internet connectivity is available, conventional networking can be used.</p>
+        <p>When it is unavailable, local peer-to-peer communication could potentially allow nearby devices to continue exchanging information.</p>
+
+        <h2>9. The Engineering Challenges</h2>
+        <p>Moving from a conventional web application to a peer-to-peer mobile platform creates a completely different set of technical challenges.</p>
+        
+        <p><strong>Peer Discovery</strong><br>
+        How can nearby devices discover one another without relying entirely on a central server?</p>
+
+        <p><strong>Communication</strong><br>
+        How can information be transferred reliably between devices?</p>
+
+        <p><strong>Offline Storage</strong><br>
+        How should posts, profiles, messages, and other information be stored locally?</p>
+
+        <p><strong>Synchronization</strong><br>
+        What happens when two devices reconnect after being offline?</p>
+
+        <p><strong>Data Propagation</strong><br>
+        Can information travel through multiple devices without requiring a permanent central server?</p>
+
+        <p><strong>Scalability</strong><br>
+        How can the network remain useful as the number of participating devices increases?</p>
+
+        <p><strong>Reliability</strong><br>
+        How can the system handle devices joining, leaving, disconnecting, or moving out of range?</p>
+
+        <p><strong>User Experience</strong><br>
+        How can all of this networking complexity remain invisible to ordinary users?</p>
+
+        <p>These challenges are now part of the core technical direction of SCREAM.</p>
+
+        <h2>10. The Goal Is Still a Social Network</h2>
+        <p>Although the underlying architecture is technically complex, SCREAM is not intended to feel like a networking experiment.</p>
+        <p>The objective is to provide a familiar social-media experience.</p>
+        <p>A user should ideally be able to:</p>
+        
+        <div class="flow-diagram">Open SCREAM → discover nearby users → create a post → view content → interact → communicate → exchange information</div>
+        
+        <p>without needing to understand how the underlying peer-to-peer network operates.</p>
+        <p>The complexity should remain underneath the interface.</p>
+        <p>This is why we continue to place significant emphasis on:</p>
+        <ul>
+            <li>User interface</li>
+            <li>User experience</li>
+            <li>Feature design</li>
+            <li>Performance</li>
+            <li>Scalability</li>
+            <li>Reliability</li>
+            <li>Ease of use</li>
+        </ul>
+        <p>The ambition is not simply to prove that two phones can communicate.</p>
+        <p>The ambition is to explore whether peer-to-peer technology can support an actual social networking experience.</p>
+
+        <h2>11. From College Assignment to Long-Term Project</h2>
+        <p>The original PHP/HTML version fulfilled its purpose as a college minor project.</p>
+        <p>But the project continued because the underlying question remained interesting.</p>
+        <p>SCREAM therefore went through several stages of evolution:</p>
+        
+        <div class="flow-diagram">
+            College Concept<br>↓<br>
+            PHP + HTML Web Application<br>↓<br>
+            Research into Mobile Development<br>↓<br>
+            Offline/P2P Architecture Exploration<br>↓<br>
+            Mobile APK Development<br>↓<br>
+            Initial Mobile/P2P Testing<br>↓<br>
+            Real-World Observation and Research<br>↓<br>
+            Continued Offline-First Development
+        </div>
+        
+        <p>This is not simply a change of programming language.</p>
+        <p>It is an architectural evolution.</p>
+        <p>The project moved from a centralized web application toward an exploration of distributed mobile communication.</p>
+
+        <h2>12. The Relationship Between SCREAM and the 2026 New Delhi Protests</h2>
+        <p>The relationship can be summarized very simply.</p>
+        <p>It is not:</p>
+        <div class="flow-diagram">New Delhi protests → SCREAM</div>
+        <p>It is:</p>
+        <div class="flow-diagram">SCREAM → original concept → PHP/HTML project → mobile/P2P idea → APK development and testing → New Delhi protests observed → broader understanding of communication resilience → continued SCREAM development</div>
+        <p>This distinction is important because the history of the project should remain accurate.</p>
+        <p>The protests were context, not origin.</p>
+        <p>They provided another real-world example through which we could think about the problem that SCREAM was already attempting to explore.</p>
+
+        <h2>13. The Broader Research Context</h2>
+        <p>Our interest in SCREAM comes from a broader observation about modern communication.</p>
+        <p>People have become heavily dependent on Internet infrastructure for almost every form of digital communication.</p>
+        <p>That dependency is normally invisible because the infrastructure works most of the time.</p>
+        <p>But when something interrupts it, the dependency becomes obvious.</p>
+        <p>A network may fail because of:</p>
+        <ul>
+            <li>Infrastructure damage</li>
+            <li>Natural disasters</li>
+            <li>Power failures</li>
+            <li>Network congestion</li>
+            <li>Telecommunications disruption</li>
+            <li>Physical isolation</li>
+            <li>Emergency conditions</li>
+            <li>Other unforeseen circumstances</li>
+        </ul>
+        <p>SCREAM explores whether a portion of social communication could continue through local device-to-device networking in such circumstances.</p>
+        <p>The project is therefore not about replacing the Internet.</p>
+        <p>It is about exploring what could exist alongside it.</p>
+
+        <h2>14. The Long-Term Vision</h2>
+        <p>The long-term vision for SCREAM is an open-source, mobile social platform capable of adapting to different connectivity conditions.</p>
+        
+        <p><strong>When Internet connectivity is available</strong><br>
+        SCREAM can use conventional Internet infrastructure where appropriate.</p>
+
+        <p><strong>When Internet connectivity is unavailable</strong><br>
+        Nearby devices could potentially communicate through peer-to-peer technologies.</p>
+
+        <p><strong>When connectivity is intermittent</strong><br>
+        Local storage and synchronization mechanisms could allow information to remain available until connectivity is restored.</p>
+
+        <p><strong>When users are physically close</strong><br>
+        Their devices could potentially communicate directly without requiring every interaction to travel through a remote server.</p>
+
+        <p>This creates a model where the application is not completely dependent on a single communication infrastructure.</p>
+
+        <h2>15. Why SCREAM Is Becoming More Interesting</h2>
+        <p>What began as a college minor project has gradually become an exploration of several areas of computer science and software engineering:</p>
+        <ul>
+            <li>Mobile computing</li>
+            <li>Peer-to-peer networking</li>
+            <li>Distributed systems</li>
+            <li>Offline-first architecture</li>
+            <li>Local communication</li>
+            <li>Data synchronization</li>
+            <li>Decentralized systems</li>
+            <li>Resilient communication</li>
+            <li>Social networking</li>
+            <li>Human-centered software design</li>
+        </ul>
+        <p>The interesting part of SCREAM is not simply that it is a social application.</p>
+        <p>The interesting part is the question underneath it:</p>
+        <p><strong>Can social communication become more resilient by allowing mobile devices to communicate directly with one another?</strong></p>
+        <p>That is the problem we are continuing to explore.</p>
+
+        <h2>16. Complete Timeline</h2>
+        
+        <div class="timeline-entry">
+            <h3>2024 — Project Begins</h3>
+            <p>Alwin Madhu and Negan Bijoy create SCREAM as a college minor project.<br>
+            Technology: PHP + HTML<br>
+            Type: Web application</p>
+        </div>
+        
+        <div class="timeline-entry">
+            <h3>2024–2025 — Web Development</h3>
+            <p>The original SCREAM application is developed and tested as a conventional server-based social platform.<br>
+            The concept of eventually creating a more independent communication architecture already exists.</p>
+        </div>
+        
+        <div class="timeline-entry">
+            <h3>2025–Early 2026 — Architectural Research</h3>
+            <p>The project begins moving conceptually beyond the original web architecture.<br>
+            Research and experimentation focus on mobile development, offline communication, local networking, and peer-to-peer technologies.</p>
+        </div>
+        
+        <div class="timeline-entry">
+            <h3>May 2026 — Mobile APK Development</h3>
+            <p>During my birthday month, I personally begin transforming SCREAM into a mobile application/APK.<br>
+            The first mobile implementation is developed and experimentally tested.<br>
+            The project begins moving toward a mobile and P2P architecture.</p>
+        </div>
+        
+        <div class="timeline-entry">
+            <h3>2026 — New Delhi Student Protests</h3>
+            <p>We monitor the student protests in New Delhi and the communication conditions surrounding the events.<br>
+            These events do not inspire or originate SCREAM.<br>
+            They become a real-world context for examining the communication-resilience problem already being explored.</p>
+        </div>
+        
+        <div class="timeline-entry">
+            <h3>2026 — Global Observation</h3>
+            <p>We continue observing communication challenges associated with conflicts, disasters, infrastructure failures, and other situations around the world.</p>
+        </div>
+        
+        <div class="timeline-entry">
+            <h3>2026 — Continued Development</h3>
+            <p>SCREAM continues evolving toward an offline-first, peer-to-peer social networking platform.</p>
+        </div>
+
+        <h2>17. Final Project Story</h2>
+        <p>SCREAM began in 2024 as a college minor project created by Alwin Madhu and Negan Bijoy. The first version was developed using PHP and HTML because of the technical and academic requirements of the college project. At that time, SCREAM was a conventional web-based social platform, but the idea behind it was already larger than the implementation.</p>
+        
+        <p>From the beginning, we were interested in the possibility of creating a social platform that would not be completely dependent on conventional Internet infrastructure. We imagined a system where nearby mobile devices could communicate directly with each other and where social communication could potentially continue even when conventional Internet connectivity was unavailable.</p>
+        
+        <p>At the time, limitations in our technical knowledge and the requirements of the college project meant that we could not fully implement that idea. The PHP/HTML application therefore became the first stage of SCREAM.</p>
+        
+        <p>As our technical knowledge developed during 2025 and early 2026, we began reconsidering the architecture. In May 2026, during my birthday month, I personally began transforming the original SCREAM project into a mobile APK/application. This was more than simply converting a website into a mobile package. The objective was to explore a new architecture based around mobile devices, local communication, offline operation, and peer-to-peer networking. The first mobile implementation was built and experimentally tested before the 2026 New Delhi student protests became part of our real-world observations.</p>
+        
+        <p>Later, we monitored the student protests in New Delhi and the communication conditions surrounding them. These events did not inspire SCREAM, did not create its offline/P2P concept, and did not cause us to convert the project into a mobile application. The mobile transition was already underway. Instead, the New Delhi events became another real-world situation through which we could examine the communication-resilience problem that SCREAM had already been exploring.</p>
+        
+        <p>We also continued observing situations around the world where conventional communication infrastructure can become unreliable or unavailable, including conflict-affected regions, disasters, infrastructure failures, and other large-scale emergencies. These observations were not about taking a political position. They helped us understand the practical environments in which resilient communication technologies could potentially become useful.</p>
+        
+        <p>Through this process, SCREAM evolved from a college PHP/HTML web project into an experimental mobile, offline-first, peer-to-peer social networking platform. The project's central question became much broader than the original academic assignment:</p>
+        
+        <p><strong>How can people continue to communicate, share information, and maintain a social network when conventional Internet connectivity is unavailable or unreliable?</strong></p>
+        
+        <p>SCREAM is not designed for one particular protest, country, conflict, or political situation. It is an exploration of a technological possibility: creating a social networking experience that can use conventional Internet infrastructure when it is available while also exploring local peer-to-peer communication when it is not.</p>
+        
+        <p>The long-term vision is to make communication more resilient without making the technology more complicated for the user. The goal is to combine the familiarity of a modern social network with the possibilities of mobile peer-to-peer and offline-first communication.</p>
+        
+        <p>What began in 2024 as a college minor project has therefore become an ongoing exploration of mobile computing, distributed systems, peer-to-peer networking, offline-first architecture, data synchronization, and resilient communication.</p>
+        
+        <p>SCREAM started as a social-media project. It evolved into an experiment in what social communication could look like when the Internet is no longer the only path between people.</p>
+
+    </main>
+    
+    <footer class="footer-simple">
+        <p>© j_e_e_n._ / Alwin Madhu. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
