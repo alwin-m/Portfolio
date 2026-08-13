@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "projectName": "Alwin Madhu Personal Digital Identity Platform",
+  "version": "1.0.0",
+  "subject": {
+    "name": "Alwin Madhu",
+    "handles": ["Jeen", "j_e_e_n._", "alwin-m"],
+    "canonicalId": "https://alwin-m.github.io/Portfolio/#person",
+    "orcid": "https://orcid.org/0009-0008-2826-5082",
+    "github": "https://github.com/alwin-m",
+    "linkedin": "https://www.linkedin.com/in/alwinmadhu7/"
+  },
+  "designSystem": {
+    "cssFile": "assets/css/quiet.css",
+    "fonts": {
+      "serif": "Instrument Serif",
+      "sans": "Inter",
+      "mono": "DM Mono"
+    },
+    "colors": {
+      "background": "#F8F8F6",
+      "surface": "#F0EFED",
+      "border": "#E4E3E0",
+      "text": "#1A1A19",
+      "textSecondary": "#6B6B66",
+      "accent": "#4A90D9"
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "file": "index.html",
+      "purpose": "Primary Magazine-Cover Homepage",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"],
+      "seo": {
+        "title": "Alwin Madhu — Personal Digital Identity & Portfolio",
+        "canonical": "https://alwin-m.github.io/Portfolio/"
+      }
+    },
+    {
+      "url": "/projects/projects-overview.html",
+      "file": "projects/projects-overview.html",
+      "purpose": "Projects Directory Hub",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/projects/project-liora.html",
+      "file": "projects/project-liora.html",
+      "purpose": "LIORA Case Study & Hathaway Algorithm",
+      "projectId": "liora",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/projects/project-scream.html",
+      "file": "projects/project-scream.html",
+      "purpose": "SCREAM P2P Mesh Social Network Case Study",
+      "projectId": "scream",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/projects/project-genome-sentinel.html",
+      "file": "projects/project-genome-sentinel.html",
+      "purpose": "Genome Sentinel AI Drug Discovery Case Study",
+      "projectId": "genome-sentinel",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/projects/project-megamind.html",
+      "file": "projects/project-megamind.html",
+      "purpose": "Megamind Offline Local AI Assistant Case Study",
+      "projectId": "megamind",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/projects/project-roscycle.html",
+      "file": "projects/project-roscycle.html",
+      "purpose": "ROS-Cycle Robotics Case Study",
+      "projectId": "roscycle",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/about/about-alwin-madhu.html",
+      "file": "about/about-alwin-madhu.html",
+      "purpose": "About Biography & Profile Node",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/writing/writing.html",
+      "file": "writing/writing.html",
+      "purpose": "Technical Publications & Architecture Essays",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/news/news.html",
+      "file": "news/news.html",
+      "purpose": "Timestamped Journal & Milestone Log",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/experiments/experiments.html",
+      "file": "experiments/experiments.html",
+      "purpose": "Prototypes & Sandbox Projects",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/timeline/timeline.html",
+      "file": "timeline/timeline.html",
+      "purpose": "Chronological Milestones Timeline",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/research/research-overview.html",
+      "file": "research/research-overview.html",
+      "purpose": "Research Publications & Papers Overview",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/work/work-experience.html",
+      "file": "work/work-experience.html",
+      "purpose": "Work Experience Breakdown",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    },
+    {
+      "url": "/contact/contact.html",
+      "file": "contact/contact.html",
+      "purpose": "Contact & Identity Links Node",
+      "sharedComponents": ["Header", "MobileNav", "Footer", "SearchOverlay"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "liora",
+      "name": "LIORA",
+      "category": "Health Technology",
+      "page": "projects/project-liora.html",
+      "image": "liora.jpg",
+      "repo": "https://github.com/alwin-m/liora",
+      "download": "Liora.apk"
+    },
+    {
+      "id": "scream",
+      "name": "SCREAM",
+      "category": "Decentralized P2P Systems",
+      "page": "projects/project-scream.html",
+      "image": "SCREAM.png",
+      "repo": "https://github.com/alwin-m/Scream-",
+      "docs": "SCREAM_CANONICAL_DOCUMENTATION.md"
+    },
+    {
+      "id": "genome-sentinel",
+      "name": "Genome Sentinel",
+      "category": "Computational Biology",
+      "page": "projects/project-genome-sentinel.html",
+      "image": "BlueMind.png"
+    },
+    {
+      "id": "megamind",
+      "name": "Megamind",
+      "category": "Personal AI Systems",
+      "page": "projects/project-megamind.html",
+      "image": "Megamind.png"
+    },
+    {
+      "id": "roscycle",
+      "name": "ROS-Cycle",
+      "category": "Robotics & Automation",
+      "page": "projects/project-roscycle.html",
+      "image": "ROSCYCLE.png"
+    }
+  ]
+}
