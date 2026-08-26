@@ -1,0 +1,29 @@
+# Alwin Madhu (Jeen)
+
+> Alwin Madhu, also known as Jeen, is an independent developer and researcher from Kerala, India. He works across computational drug discovery, peer-to-peer mesh networking, local AI systems, and privacy-respecting health technology. He is pursuing a BCA at Manipal University Jaipur.
+
+## Identity
+
+- Name: Alwin Madhu
+- Alias: Jeen / j_e_e_n._
+- Website: https://alwin-m.github.io/Portfolio/
+- GitHub: https://github.com/alwin-m
+- ORCID: https://orcid.org/0009-0008-2826-5082
+- Instagram: https://www.instagram.com/j_e_e_n._/
+
+## Projects
+
+- [LIORA](https://alwin-m.github.io/Portfolio/projects/liora/): Privacy-first menstrual wellness and cycle tracking app using the Hathaway Algorithm.
+- [SCREAM](https://alwin-m.github.io/Portfolio/projects/scream/): Experimental peer-to-peer mobile messaging concept using Bluetooth and Wi-Fi Direct.
+- [Genome Sentinel](https://alwin-m.github.io/Portfolio/projects/genome-sentinel/): Computational drug discovery platform combining AI-assisted research with molecular docking.
+- [Liora](https://alwin-m.github.io/Portfolio/projects/liora/): Health technology project focused on private, user-controlled cycle data.
+- [ROS-Cycle-Project](https://alwin-m.github.io/Portfolio/projects/roscycle/): Minimal web-based cycle tracker.
+- [Megamind](https://alwin-m.github.io/Portfolio/projects/megamind/): Local voice assistant and personal AI experiment.
+- [Hathaway Algorithm](https://alwin-m.github.io/Portfolio/research/hathaway-algorithm/): Research page for a Bayesian/Markov menstrual-cycle forecasting model.
+
+## More
+
+- [About](https://alwin-m.github.io/Portfolio/about/)
+- [Projects](https://alwin-m.github.io/Portfolio/projects/)
+- [Research](https://alwin-m.github.io/Portfolio/research/)
+- [Contact](https://alwin-m.github.io/Portfolio/contact/)
