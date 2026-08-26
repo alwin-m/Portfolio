@@ -1,0 +1,22 @@
+# Alwin Madhu — Full site index
+
+This file is a compact, machine-readable corpus index for the portfolio of Alwin Madhu (Jeen). The canonical source for each page is linked below; the visible HTML and JSON-LD on those pages are authoritative.
+
+## About
+
+Alwin Madhu is a developer and researcher from Kerala, India, also known as Jeen for creative and photography work. He is pursuing a Bachelor of Computer Applications at Manipal University Jaipur after a Diploma in Computer Engineering and an Electronics Science background. His focus areas include computational drug discovery, bioinformatics, peer-to-peer networking, Bluetooth Low Energy, local/on-device AI, and health technology.
+
+## Project pages
+
+- LIORA — privacy-first menstrual wellness and cycle tracking: https://alwin-m.github.io/Portfolio/projects/liora/
+- SCREAM — experimental offline peer-to-peer messaging: https://alwin-m.github.io/Portfolio/projects/scream/
+- Genome Sentinel — computational drug discovery research platform: https://alwin-m.github.io/Portfolio/projects/genome-sentinel/
+- ROS-Cycle-Project — minimal web-based period tracker: https://alwin-m.github.io/Portfolio/projects/roscycle/
+- Megamind — local voice assistant: https://alwin-m.github.io/Portfolio/projects/megamind/
+- Hathaway Algorithm research: https://alwin-m.github.io/Portfolio/research/hathaway-algorithm/
+
+## External identity links
+
+- GitHub: https://github.com/alwin-m
+- ORCID: https://orcid.org/0009-0008-2826-5082
+- Instagram: https://www.instagram.com/j_e_e_n._/
