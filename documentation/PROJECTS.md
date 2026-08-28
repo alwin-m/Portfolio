@@ -41,7 +41,7 @@
   - `scream.html` (Original legacy page preserved for historical reference)
   - `SCREAM_CANONICAL_DOCUMENTATION.md` (Original canonical project history document)
 - **External Links**:
-  - GitHub: [https://github.com/alwin-m/Scream-](https://github.com/alwin-m/Scream-)
+  - GitHub: [https://github.com/alwin-m/Scream](https://github.com/alwin-m/Scream)
 - **Implementation Boundary (Files to Edit for SCREAM)**:
   - Page: `projects/project-scream.html`
   - Historical Docs: `SCREAM_CANONICAL_DOCUMENTATION.md`

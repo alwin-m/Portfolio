@@ -4,13 +4,13 @@
   <!-- Root & Main Portfolio Page -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://alwin-m.github.io/Portfolio/index.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,14 +18,14 @@
   <!-- Knowledge Graph Nodes -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/about/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   
   <url>
     <loc>https://alwin-m.github.io/Portfolio/projects/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -33,31 +33,31 @@
   <!-- Individual Project Nodes -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/projects/liora/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://alwin-m.github.io/Portfolio/projects/scream/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://alwin-m.github.io/Portfolio/projects/genome-sentinel/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://alwin-m.github.io/Portfolio/projects/megamind/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://alwin-m.github.io/Portfolio/projects/roscycle/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -65,7 +65,7 @@
   <!-- Work & Career -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/work/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -73,7 +73,7 @@
   <!-- Research & Papers -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/research/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -81,7 +81,7 @@
   <!-- Writing & Articles -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/writing/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -89,7 +89,7 @@
   <!-- Timeline -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/timeline/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -97,7 +97,7 @@
   <!-- Live Status Now Page -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/now/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -105,7 +105,46 @@
   <!-- Contact & Verification -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/contact/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- News & Updates -->
+  <url>
+    <loc>https://alwin-m.github.io/Portfolio/news/news.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Experiments -->
+  <url>
+    <loc>https://alwin-m.github.io/Portfolio/experiments/experiments.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Research & Prompts Pages -->
+  <url>
+    <loc>https://alwin-m.github.io/Portfolio/research.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://alwin-m.github.io/Portfolio/prompts.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- SCREAM Project Page -->
+  <url>
+    <loc>https://alwin-m.github.io/Portfolio/scream.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -113,19 +152,19 @@
   <!-- Legacy & Asset Downloads -->
   <url>
     <loc>https://alwin-m.github.io/Portfolio/downloads.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://alwin-m.github.io/Portfolio/Liora.apk</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://alwin-m.github.io/Portfolio/DigitizingTouch.pdf</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.80</priority>
   </url>

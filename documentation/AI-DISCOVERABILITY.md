@@ -54,7 +54,7 @@ The `llms.txt` file at the root contains:
   - Repository: https://github.com/alwin-m/liora
 - SCREAM: Offline peer-to-peer mobile social platform.
   - Page: https://alwin-m.github.io/Portfolio/projects/project-scream.html
-  - Repository: https://github.com/alwin-m/Scream-
+  - Repository: https://github.com/alwin-m/Scream
 - Genome Sentinel: AI computational drug discovery & AutoDock Vina integration.
   - Page: https://alwin-m.github.io/Portfolio/projects/project-genome-sentinel.html
 - Megamind: Offline personal AI desktop assistant.
