@@ -1,112 +1,103 @@
-# AI Agent Operational Guide & Safety Directives (`AI-AGENTS.md`)
+# AI Agent Operational Guide & System Directives (`AI-AGENTS.md`)
 
-> **Mandatory rules and workflow constraints for AI coding assistants working on Alwin Madhu's Portfolio codebase.**
+> **Mandatory architectural rules, SEO/GEO constraints, and workflow guidelines for AI coding assistants working on Alwin Madhu's Portfolio repository.**
 
 ---
 
-## 1. Golden Rules of System Maintenance
+## 1. Golden Rules of System Architecture
 
-Future AI agents MUST strictly obey the following rules when interacting with this repository:
+Future AI coding agents MUST strictly obey the following rules when interacting with this repository:
 
-1. **READ DOCUMENTATION FIRST**: Always consult `FILE-MAP.md`, `PROJECTS.md`, or `UI-COMPONENTS.md` before attempting any code edit.
-2. **NO UNREQUESTED REDESIGNS**: Never change the visual identity, colors, typography, layout grid, component hierarchy, or animations unless explicitly instructed by the user.
-3. **MAKE MINIMAL TARGETED EDITS**: Touch only the exact lines/files required to fulfill the user's request. Do NOT touch unrelated files ("while I'm here" modifications are strictly forbidden).
-4. **NO DESTRUCTIVE REFACTORING**: Do not replace vanilla HTML/CSS/JS with frameworks (React, Vue, Tailwind, Next.js). Do not rewrite working code simply to conform to a personal style preference.
-5. **ENFORCE UNIQUE HTML FILENAMES (RULE 9)**:
-   - **Root homepage**: `index.html` (the ONLY allowed `index.html` in the entire repository).
-   - **Sub-pages**: MUST use descriptive, globally unique filenames (e.g., `about/about-alwin-madhu.html`, `projects/project-liora.html`, `news/news.html`). NEVER create `subfolder/index.html`.
-6. **PRESERVE STRUCTURED DATA & SEO**: Never delete or mangle JSON-LD scripts (`SoftwareApplication`, `Person`, `BreadcrumbList`, `FAQPage`), meta descriptions, canonical URLs, or heading tags (`<h1>`).
-7. **PRESERVE CANONICAL ENTITY CONNECTIVITY**: The root canonical identity is `https://alwin-m.github.io/Portfolio/#person`. Ensure sameAs links (GitHub, LinkedIn, ORCID) and author references remain consistent across all project pages.
-8. **DO NOT INVENT PROJECT MATERIAL**: Use existing screenshots (`liora.jpg`, `SCREAM.png`, `Megamind.png`, `ROSCYCLE.png`), papers (`DigitizingTouch.pdf`), and documentation (`SCREAM_CANONICAL_DOCUMENTATION.md`) as source material. Mark unknown fields as unknown.
+1. **READ DOCUMENTATION FIRST**: Always consult `FILE-MAP.md`, `PROJECTS.md`, or `documentation/SEO.md` before attempting any code edit.
+2. **CLEAN CANONICAL DIRECTORY ARCHITECTURE (GITHUB PAGES STANDARD)**:
+   - Every route in the portfolio must be backed by a full, self-contained `index.html` inside its directory (e.g. `about/index.html`, `projects/index.html`, `projects/liora/index.html`, `projects/scream/index.html`, `provenance/index.html`).
+   - **STRICTLY PROHIBITED**: Never generate 0-second `<meta http-equiv="refresh">` redirect stubs. Search engines (Googlebot) treat them as soft-404s, and AI scrapers (GPTBot, ClaudeBot, PerplexityBot) discard empty shells.
+3. **CANONICAL URL HARMONY**:
+   - The `<link rel="canonical">`, OpenGraph URL (`og:url`), and `sitemap.xml` `<loc>` must all match the exact directory URL with a trailing slash (e.g., `https://alwin-m.github.io/Portfolio/projects/liora/`).
+4. **BRAND PROVENANCE & WATERMARK INTEGRITY**:
+   - The white watermark signature **`© j_e_e_n._`** (established in **2020**) is the verified copyright marking and brand signature of Alwin Madhu.
+   - Always preserve Schema.org `VisualArtwork` and `Brand` structured data, IPTC/XMP copyright headers, and the canonical knowledge node at `/provenance/`.
+5. **STRICT STORAGE & CORE WEB VITALS BUDGETS**:
+   - **HTML Page Weight**: < 45 KB uncompressed per page (Target: 15–25 KB).
+   - **CSS**: Pure vanilla CSS (`quiet.css` < 20 KB). Never introduce heavy CSS frameworks (Tailwind CLI, Bootstrap).
+   - **JavaScript**: Vanilla JS only (`scripts.js` + `search.js` < 20 KB). Zero runtime framework overhead (no React/Vue hydration).
+   - **Images**: Must be modern WebP or optimized JPEG < 120 KB each with explicit `width` and `height` attributes to prevent Cumulative Layout Shift (CLS = 0).
+   - **Core Web Vitals Targets**: LCP < 1.2s, INP < 100ms, CLS = 0.
+6. **NO DESTRUCTIVE REFACTORING**:
+   - Do not replace vanilla HTML/CSS/JS with single-page applications (SPAs) or introduce bundlers (Vite, Webpack) unless explicitly instructed.
+7. **PRESERVE STRUCTURED DATA & KNOWLEDGE GRAPH**:
+   - Never remove or mangle JSON-LD scripts (`Person`, `SoftwareApplication`, `VisualArtwork`, `BreadcrumbList`, `FAQPage`), meta descriptions, or heading structures (`<h1>`).
+   - Root canonical identity is `https://alwin-m.github.io/Portfolio/#person`.
+8. **DO NOT INVENT PROJECT CLAIMS**:
+   - Base all descriptions on verified source materials:
+     - **SCREAM**: Offline peer-to-peer mobile messaging over BLE/Wi-Fi Direct; talking without internet; popularity gained through communication disruptions.
+     - **LIORA**: Privacy-first menstrual wellness and conversational speech tracking platform; Hathaway Algorithm; 100% offline data storage.
+     - **Genome Sentinel**: AI computational drug discovery and AutoDock Vina molecular docking.
+     - **Megamind**: Offline personal AI assistant with local LLM.
 
 ---
 
 ## 2. Standard Targeted Change Workflow
 
-When responding to a user prompt, follow this 12-step execution pipeline:
+When responding to a user prompt, follow this 10-step execution pipeline:
 
 ```text
 [USER REQUEST]
       │
       ▼
-[1. READ RELEVANT DOCS] ──► Check documentation/FILE-MAP.md & project-map.json
+[1. READ RELEVANT DOCS] ──► Check documentation/FILE-MAP.md & SEO.md
       │
       ▼
-[2. DETERMINE SCOPE] ────► Local (1 file) vs Global (CSS/Header/Footer)
+[2. DETERMINE SCOPE] ────► Single Node (projects/liora/) vs Global (Header/Footer/CSS)
       │
       ▼
-[3. IDENTIFY TARGET FILES]► Locate exact file path (e.g., projects/project-liora.html)
+[3. INSPECT TARGET FILE] ─► View target file; inspect canonical link & JSON-LD
       │
       ▼
-[4. INSPECT CODE] ────────► View target file; check imports & structured data
+[4. EXECUTE MINIMAL CHANGE]► Modify only the target line/element
       │
       ▼
-[5. EXECUTE MINIMAL CHANGE]► Modify only the target line/element
+[5. VERIFY INTERNAL LINKS]► Ensure clean relative links (e.g. ../../projects/)
       │
       ▼
-[6. CHECK DEPENDENCIES] ──► Verify internal links and ⌘K search index references
+[6. CHECK SEO & JSON-LD] ─► Confirm canonical URL, OpenGraph, and schema graph
       │
       ▼
-[7. CHECK SEO & JSON-LD] ─► Confirm canonical link and schema scripts remain intact
+[7. CHECK RESPONSIVENESS] ─► Validate on 320px mobile through 1920px desktop
       │
       ▼
-[8. CHECK RESPONSIVE LAYOUT]► Ensure styles work on desktop and mobile breakpoints
+[8. TEST IN LOCAL SERVER] ─► Ensure HTTP 200 responses with zero broken links
       │
       ▼
-[9. CHECK ACCESSIBILITY] ─► Confirm ARIA labels, alt text, and semantic HTML
+[9. UPDATE SITEMAP/LLMS] ─► If new page added, update sitemap.xml and llms.txt
       │
       ▼
-[10. VERIFY IN BROWSER/CLI]► Run link verification or inspect DOM output
-      │
-      ▼
-[11. UPDATE CHANGELOG] ──► If architectural/structural, log in documentation/CHANGELOG.md
-      │
-      ▼
-[12. FINAL REPORT] ──────► Report exact changes made to user concisely
+[10. FINAL REPORT] ───────► Report exact changes made concisely to user
 ```
 
 ---
 
-## 3. Scoping Classification Examples
+## 3. Directory & Canonical URL Standard
 
-### Scenario A: Local Content Change
-- **User Prompt**: *"Update the release year for LIORA to 2025-2026."*
-- **Action**:
-  - Open `projects/project-liora.html`.
-  - Locate `.case-meta-val` under Year.
-  - Modify only `projects/project-liora.html`.
-  - **Do NOT touch**: `quiet.css`, `index.html`, `search.js`, or any other project page.
+All canonical files follow the directory standard:
 
-### Scenario B: Global UI Change
-- **User Prompt**: *"Add a new link 'Journal' to the main navigation bar across all pages."*
-- **Action**:
-  - Recognize that Navigation is a **SHARED COMPONENT**.
-  - Inspect `documentation/UI-COMPONENTS.md` under `Header & Navigation`.
-  - Update nav links in `index.html`, `projects/projects-overview.html`, `projects/project-liora.html`, `projects/project-scream.html`, `projects/project-genome-sentinel.html`, `projects/project-megamind.html`, `projects/project-roscycle.html`, `news/news.html`, `writing/writing.html`, `about/about-alwin-madhu.html`, `experiments/experiments.html`, `timeline/timeline.html`, `work/work-experience.html`, `research/research-overview.html`, `contact/contact.html`.
-  - Check mobile drawer nav in all files.
-
-### Scenario C: Content Addition
-- **User Prompt**: *"Add a new news update about LIORA."*
-- **Action**:
-  - Open `news/news.html` and `index.html` (since home displays latest news).
-  - Add the new `.news-item` block.
-  - Update `assets/data/search-index.json` or `index.html` search array if search indexing is updated.
-  - **Do NOT**: Redesign the news list CSS or alter existing news items.
-
----
-
-## 4. Anti-Patterns & Prohibited Actions
-
-- ❌ **DO NOT** convert static `.html` files into a single-page application (SPA) or introduce build tooling (Webpack, Vite, Tailwind CLI) unless explicitly requested.
-- ❌ **DO NOT** edit global CSS variables in `assets/css/quiet.css` to fix a styling issue on a single page. Write localized overrides inside the page or create a specific scoped class.
-- ❌ **DO NOT** delete comments or docstrings from existing code.
-- ❌ **DO NOT** create orphan files without linking them to the sitemap and navigation.
-- ❌ **DO NOT** guess variable names or file paths—always inspect the codebase first.
-
----
-
-## 5. Reporting Unrelated Issues
-
-If an AI agent discovers bugs, broken links, or accessibility flaws while inspecting files:
-- **DO NOT fix them automatically** unless they are directly related to the user request.
-- **DO include them in the final summary** under a section titled `Potential Improvements Discovered (Not Modified)`.
+| Section | Canonical File Location | Public Canonical URL |
+| :--- | :--- | :--- |
+| **Homepage** | `index.html` | `https://alwin-m.github.io/Portfolio/` |
+| **Brand Provenance** | `provenance/index.html` | `https://alwin-m.github.io/Portfolio/provenance/` |
+| **About** | `about/index.html` | `https://alwin-m.github.io/Portfolio/about/` |
+| **Work Hub** | `projects/index.html` | `https://alwin-m.github.io/Portfolio/projects/` |
+| **LIORA** | `projects/liora/index.html` | `https://alwin-m.github.io/Portfolio/projects/liora/` |
+| **SCREAM** | `projects/scream/index.html` | `https://alwin-m.github.io/Portfolio/projects/scream/` |
+| **Genome Sentinel** | `projects/genome-sentinel/index.html` | `https://alwin-m.github.io/Portfolio/projects/genome-sentinel/` |
+| **Megamind** | `projects/megamind/index.html` | `https://alwin-m.github.io/Portfolio/projects/megamind/` |
+| **ROS-Cycle** | `projects/roscycle/index.html` | `https://alwin-m.github.io/Portfolio/projects/roscycle/` |
+| **Research Hub** | `research/index.html` | `https://alwin-m.github.io/Portfolio/research/` |
+| **Hathaway Algorithm** | `research/hathaway-algorithm/index.html` | `https://alwin-m.github.io/Portfolio/research/hathaway-algorithm/` |
+| **Writing** | `writing/index.html` | `https://alwin-m.github.io/Portfolio/writing/` |
+| **News** | `news/index.html` | `https://alwin-m.github.io/Portfolio/news/` |
+| **Experiments** | `experiments/index.html` | `https://alwin-m.github.io/Portfolio/experiments/` |
+| **Timeline** | `timeline/index.html` | `https://alwin-m.github.io/Portfolio/timeline/` |
+| **Work Experience** | `work/index.html` | `https://alwin-m.github.io/Portfolio/work/` |
+| **Now** | `now/index.html` | `https://alwin-m.github.io/Portfolio/now/` |
+| **Contact** | `contact/index.html` | `https://alwin-m.github.io/Portfolio/contact/` |
