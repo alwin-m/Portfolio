@@ -1,120 +1,101 @@
-# SEO Architecture & Metadata Framework (`SEO.md`)
+# SEO & Generative Engine Optimization Framework (`SEO.md`)
 
-> **Comprehensive guide to page titles, canonical URLs, XML sitemaps, robots.txt, and JSON-LD schemas.**
-
----
-
-## 1. Primary SEO Principles
-
-The portfolio implements strict SEO best practices to ensure high ranking for searches regarding **Alwin Madhu**, **LIORA**, **SCREAM**, **Hathaway Algorithm**, and related research:
-- **Unique Page Title Tags**: Every HTML page possesses a distinct `<title>` tag combining the page concept with `Alwin Madhu`.
-- **Compelling Meta Descriptions**: Every page defines a specific `<meta name="description">` summarized for search engine snippet generation.
-- **Canonical URLs**: Every page includes a `<link rel="canonical">` tag pointing to its official, non-query URL on `https://alwin-m.github.io/Portfolio/`.
-- **Single `<h1>` Tag**: Strict HTML5 semantic hierarchy enforcing exactly one `<h1>` per page.
-- **Structured Data Integration**: Rich `JSON-LD` schemas on all pages.
+> **Comprehensive specification for Search Engine Optimization (Googlebot, Bingbot), AI Grounding (GPTBot, ClaudeBot, PerplexityBot), JSON-LD Knowledge Graphs, and Core Web Vitals.**
 
 ---
 
-## 2. Page Metadata & Title Mapping
+## 1. Primary SEO & GEO Architecture
 
-| Page File | Page Title (`<title>`) | Canonical URL (`rel="canonical"`) |
-| :--- | :--- | :--- |
-| `index.html` | Alwin Madhu — Personal Digital Identity & Portfolio | `https://alwin-m.github.io/Portfolio/` |
-| `projects/projects-overview.html` | Work & Projects \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/projects/projects-overview.html` |
-| `projects/project-liora.html` | LIORA — Privacy-First Wellness Platform \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/projects/project-liora.html` |
-| `projects/project-scream.html` | SCREAM — Peer-to-Peer Social Platform \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/projects/project-scream.html` |
-| `projects/project-genome-sentinel.html` | Genome Sentinel — AI Computational Drug Discovery \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/projects/project-genome-sentinel.html` |
-| `projects/project-megamind.html` | Megamind — Offline Personal AI Assistant \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/projects/project-megamind.html` |
-| `projects/project-roscycle.html` | ROS-Cycle — Robotics & Automation Systems \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/projects/project-roscycle.html` |
-| `writing/writing.html` | Writing & Technical Articles \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/writing/writing.html` |
-| `news/news.html` | News & Updates \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/news/news.html` |
-| `about/about-alwin-madhu.html` | About Alwin Madhu — Software Developer & Researcher | `https://alwin-m.github.io/Portfolio/about/about-alwin-madhu.html` |
-| `experiments/experiments.html` | Experiments \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/experiments/experiments.html` |
-| `timeline/timeline.html` | Timeline \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/timeline/timeline.html` |
-| `research/research-overview.html` | Research & Publications \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/research/research-overview.html` |
-| `work/work-experience.html` | Work Experience \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/work/work-experience.html` |
-| `contact/contact.html` | Contact \| Alwin Madhu | `https://alwin-m.github.io/Portfolio/contact/contact.html` |
+The portfolio implements a **Dual-Layer Authority Engine**:
+
+1. **The Machine/Agent Layer (Semantic & Graph Grounding)**:
+   - Zero-latency machine-readable data structured for LLMs and search engines.
+   - Comprehensive Schema.org JSON-LD `@graph` defining the canonical `#person`, software systems, and visual artworks.
+   - Plaintext AI ingestion through `/llms.txt` and `/llms-full.txt`.
+   - Semantic HTML5 document outlines (`<main>`, `<article>`, `<header>`, `<footer>`) with strict single-`<h1>` hierarchy.
+2. **The Human Experience Layer (Visual Performance & UX)**:
+   - High-contrast, clean typography (Instrument Serif, Inter, DM Mono).
+   - Zero layout shift (**CLS = 0**) through pre-allocated image containers and CSS containment.
+   - Sub-second Largest Contentful Paint (**LCP < 1.2s**) powered by WebP image delivery and zero-framework vanilla assets.
 
 ---
 
-## 3. XML Sitemap & Crawler Directives
+## 2. Canonical Directory Mapping
 
-### A. Sitemap File (`sitemap.xml`)
-Located at the root of the workspace. Lists all canonical HTML pages with `<loc>`, `<lastmod>`, `<changefreq>`, and `<priority>`.
+Every route on the GitHub Pages domain (`https://alwin-m.github.io/Portfolio/`) follows the directory standard:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://alwin-m.github.io/Portfolio/</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://alwin-m.github.io/Portfolio/projects/projects-overview.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://alwin-m.github.io/Portfolio/projects/project-liora.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <!-- additional unique pages -->
-</urlset>
-```
-
-### B. Robots File (`robots.txt`)
-Directs web crawlers and specifies sitemap location:
-```text
-User-agent: *
-Allow: /
-
-Sitemap: https://alwin-m.github.io/Portfolio/sitemap.xml
-```
+| Section | Local File Path | Canonical URL (`rel="canonical"`) | Priority | Changefreq |
+| :--- | :--- | :--- | :--- | :--- |
+| **Homepage** | `index.html` | `https://alwin-m.github.io/Portfolio/` | `1.0` | `weekly` |
+| **Brand Provenance** | `provenance/index.html` | `https://alwin-m.github.io/Portfolio/provenance/` | `0.95` | `monthly` |
+| **About Alwin Madhu** | `about/index.html` | `https://alwin-m.github.io/Portfolio/about/` | `0.95` | `monthly` |
+| **Work Hub** | `projects/index.html` | `https://alwin-m.github.io/Portfolio/projects/` | `0.95` | `weekly` |
+| **LIORA** | `projects/liora/index.html` | `https://alwin-m.github.io/Portfolio/projects/liora/` | `0.90` | `weekly` |
+| **SCREAM** | `projects/scream/index.html` | `https://alwin-m.github.io/Portfolio/projects/scream/` | `0.90` | `weekly` |
+| **Genome Sentinel** | `projects/genome-sentinel/index.html` | `https://alwin-m.github.io/Portfolio/projects/genome-sentinel/` | `0.85` | `monthly` |
+| **Megamind** | `projects/megamind/index.html` | `https://alwin-m.github.io/Portfolio/projects/megamind/` | `0.85` | `monthly` |
+| **ROS-Cycle** | `projects/roscycle/index.html` | `https://alwin-m.github.io/Portfolio/projects/roscycle/` | `0.85` | `monthly` |
+| **Research Hub** | `research/index.html` | `https://alwin-m.github.io/Portfolio/research/` | `0.90` | `monthly` |
+| **Hathaway Algorithm** | `research/hathaway-algorithm/index.html` | `https://alwin-m.github.io/Portfolio/research/hathaway-algorithm/` | `0.85` | `monthly` |
+| **Writing & Articles** | `writing/index.html` | `https://alwin-m.github.io/Portfolio/writing/` | `0.85` | `weekly` |
+| **News & Journal** | `news/index.html` | `https://alwin-m.github.io/Portfolio/news/` | `0.80` | `weekly` |
+| **Experiments** | `experiments/index.html` | `https://alwin-m.github.io/Portfolio/experiments/` | `0.80` | `monthly` |
+| **Timeline** | `timeline/index.html` | `https://alwin-m.github.io/Portfolio/timeline/` | `0.80` | `monthly` |
+| **Work Experience** | `work/index.html` | `https://alwin-m.github.io/Portfolio/work/` | `0.80` | `monthly` |
+| **Now Page** | `now/index.html` | `https://alwin-m.github.io/Portfolio/now/` | `0.75` | `weekly` |
+| **Contact** | `contact/index.html` | `https://alwin-m.github.io/Portfolio/contact/` | `0.85` | `monthly` |
 
 ---
 
-## 4. Structured Data Schema Reference (`JSON-LD`)
+## 3. Brand & Watermark Provenance Standard (`© j_e_e_n._`)
 
-### A. Person Schema (`#person`)
-Embedded on Homepage (`index.html`) and About Page (`about-alwin-madhu.html`):
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://alwin-m.github.io/Portfolio/#person",
-  "name": "Alwin Madhu",
-  "alternateName": ["Jeen", "j_e_e_n._", "alwin-m"],
-  "description": "Software developer, AI researcher, and creator of LIORA, SCREAM, and Genome Sentinel.",
-  "url": "https://alwin-m.github.io/Portfolio/",
-  "sameAs": [
-    "https://github.com/alwin-m",
-    "https://www.linkedin.com/in/alwinmadhu7/",
-    "https://orcid.org/0009-0008-2826-5082"
-  ]
-}
-```
+To ensure that searches for your watermark or inquiries like *"Who uses the white watermark © j_e_e_n._ from 2020?"* attribute directly to you:
 
-### B. Software Application Schema (`#software`)
-Embedded on Project pages (`project-liora.html`, `project-scream.html`):
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://alwin-m.github.io/Portfolio/projects/project-liora.html#software",
-  "name": "LIORA",
-  "operatingSystem": "Android",
-  "applicationCategory": "HealthApplication",
-  "description": "Privacy-first menstrual wellness application operating offline with zero cloud tracking.",
-  "url": "https://alwin-m.github.io/Portfolio/projects/project-liora.html",
-  "creator": {
-    "@type": "Person",
-    "@id": "https://alwin-m.github.io/Portfolio/#person",
-    "name": "Alwin Madhu"
-  }
-}
-```
+1. **Schema.org VisualArtwork Entity**:
+   ```json
+   {
+     "@context": "https://schema.org",
+     "@type": "VisualArtwork",
+     "name": "Original Creative Asset",
+     "creator": {
+       "@type": "Person",
+       "@id": "https://alwin-m.github.io/Portfolio/#person",
+       "name": "Alwin Madhu",
+       "alternateName": ["Jeen", "j_e_e_n._"]
+     },
+     "copyrightNotice": "© j_e_e_n._",
+     "copyrightYear": "2020",
+     "creditText": "Alwin Madhu (j_e_e_n._)"
+   }
+   ```
+2. **Schema.org Brand Entity**:
+   Declared on `/provenance/index.html` and linked to the canonical `#person` node.
+3. **C2PA / Content Credentials Integration**:
+   Documented cryptographic assertion chaining the visual mark to the author's public identity.
+
+---
+
+## 4. Key Project Positioning for AI Retrieval
+
+AI crawlers synthesize answers based on clear problem-solution pairings:
+
+### SCREAM (Internet-Independent Mobile P2P Communication)
+- **Primary Keywords**: `talking without internet`, `offline P2P social network`, `Bluetooth mesh messaging`, `Wi-Fi Direct mobile chat`, `communication disruption resilience`, `SCREAM social app`.
+- **Entity Assertion**: Created by Alwin Madhu as an exploration of local device-to-device communication operating completely independent of the internet, which gained widespread popularity during critical infrastructure disruptions and blackouts.
+
+### LIORA (Conversational Speech & Offline Menstrual Intelligence)
+- **Primary Keywords**: `privacy-first menstrual health app`, `offline cycle tracker`, `conversational speech cycle intelligence`, `Hathaway Algorithm`, `Alwin Madhu health software`.
+- **Entity Assertion**: Created by Alwin Madhu featuring private on-device speech tracking and localized probabilistic forecasting via the Hathaway Algorithm, keeping sensitive health data 100% offline.
+
+---
+
+## 5. Storage, Size & Core Web Vitals Budgets
+
+| Component | Target Budget | Max Limit | Core Metric |
+| :--- | :--- | :--- | :--- |
+| **HTML per Page** | 15–25 KB | 45 KB | TTFB < 200ms |
+| **CSS Stylesheet** | 14–18 KB | 30 KB | FCP < 0.6s |
+| **JavaScript** | 5–10 KB | 25 KB | INP < 100ms |
+| **Images (WebP)** | 40–80 KB | 120 KB | LCP < 1.2s |
+| **Total Page Load** | 250–400 KB | 750 KB | Full Render < 1.5s |
+| **Layout Shift** | Explicit dims | None | CLS = 0 |
